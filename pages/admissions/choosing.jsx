@@ -1,4 +1,5 @@
 jsx
+// Debugging comment
 import Layout from '@components/Layout';
 
 export default function Choosing() {
