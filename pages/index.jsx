@@ -1,10 +1,82 @@
-import Layout from "@components/Layout";
+import Link from 'next/link';
+import Layout from '@components/Layout';
 
 export default function Home() {
   return (
     <Layout>
-      <h1>Welcome to Crider&apos;s Institute</h1>
-      <p>This is the homepage.</p>
+      <div className="max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4 text-center">
+          Welder Training in Kansas City, MO and the Surrounding Areas
+        </h1>
+        <p className="text-lg text-center text-gray-700 mb-2">
+          Locally Owned Since 2015 | Free Tours | Competitive Class Rates
+        </p>
+        <p className="text-center text-xl font-semibold mb-6">
+          📞 (816) 992-4046
+        </p>
+
+        <div className="text-base text-gray-700 space-y-4 mb-10">
+          <p>
+            Enroll in Our Master Welding and Hobby Welding Programs
+            <br />
+            At Crider&apos;s Institute of Welding Technology, we can train you to be a top-notch certified welder,
+            enabling you to have a marketable skill, a rewarding career, and the self-worth and satisfaction of
+            knowing your training is the best in the industry. You can receive your certification in as little as
+            4 months with our 16 week course or receive advanced pipe welding certification with our 24 week course.
+            We have flexible schedule options and tuition assistance available.
+          </p>
+          <p>
+            Conveniently located in Grain Valley, MO, CIWT provides 20 percent classroom and 80 percent hands-on learning
+            to certify our students in pipe, stainless steel, and aluminum welding. We never have more than a 12:1
+            student-to-instructor ratio. This allows for one-on-one training with our experienced and caring staff.
+            This is just one of the many features that make Crider&apos;s Institute of Welding Technology the finest place
+            for welder training in Kansas City, MO and the surrounding areas. We&apos;re committed to creating and
+            maintaining an environment that&apos;s conducive to learning, growing, and always improving. At Crider&apos;s
+            Institute of Welding Technology, we take your success seriously.
+          </p>
+          <p>
+            Whether you&apos;re a high school graduate, a military veteran, or just looking for a new career, we can help
+            you get the welding training you need. Becoming a certified welder with CIWT can open up job opportunities in
+            various industries such as automotive, shipbuilding, pipeline, aircraft, and more. Call us today for a free
+            quote! Welding training can open the door to a world of possibilities you never could&apos;ve imagined before.
+            As the provider of welder training Columbia, MO and the surrounding areas prefer, Crider&apos;s Institute of
+            Welding Technology is the wisest place to begin your next chapter.
+          </p>
+        </div>
+
+        {/* Programs Section */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Master Welder Program */}
+          <div className="border p-6 rounded shadow-sm">
+            <h2 className="text-2xl font-bold mb-2">Master Welders Program</h2>
+            <p className="text-gray-700 mb-4">
+              Become a master certified welder in as little as 16 weeks with our welding programs. Our knowledgeable,
+              caring, and helpful instructors will give you the guidance you need to advance your skills and begin your
+              career as a successful welder.
+            </p>
+            <Link
+              href="/welding/master"
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Learn More
+            </Link>
+          </div>
+
+          {/* Hobby Welding Classes */}
+          <div className="border p-6 rounded shadow-sm">
+            <h2 className="text-2xl font-bold mb-2">Hobby Welding Classes</h2>
+            <p className="text-gray-700 mb-4">
+              We also have classes for hobby welders who just want to learn welding without it being their career.
+            </p>
+            <Link
+              href="/welding/hobby"
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }
