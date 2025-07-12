@@ -6,11 +6,21 @@ export default function Reviews() {
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
         <h1 className="text-3xl font-bold mb-4">Student Reviews</h1>
         <p className="text-lg text-gray-700 mb-8">
-          Our Google Reviews and testimonials will be displayed here soon.
-          We’re excited to share what our students say about training at Crider’s Institute of Welding!
+          Here’s what our students say about training at Crider’s Institute of Welding Technology!
         </p>
-        <p className="text-sm text-gray-500">
-          Check back soon for real stories from our graduates and industry partners.
+        
+        {/* ✅ Google Reviews Widget Embed */}
+        <div className="elfsight-app-YOUR_APP_ID_HERE"></div>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
+        <p className="text-sm text-gray-500 mt-8">
+          Want to see more? Visit our <a 
+            href="https://www.google.com/maps/place/Crider's+Institute+of+Welding+Technology/"
+            target="_blank" rel="noopener noreferrer" 
+            className="text-blue-600 underline"
+          >
+            Google Maps page
+          </a>.
         </p>
       </div>
     </Layout>

@@ -4,6 +4,19 @@ import Layout from '@components/Layout';
 export default function Home() {
   return (
     <Layout>
+      {/* Meet Stan Section */}
+      <section className="max-w-4xl mx-auto px-4 py-8 text-center">
+        <h2 className="text-3xl font-bold mb-4">Meet Stan Crider</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          With over 45 years of welding experience and 25+ years teaching, Stan brings real-world knowledge to every student.
+          He’s an AWS Certified Welding Inspector & Educator, ready to help you build the skills for a rewarding career.
+        </p>
+        <p className="text-base text-gray-600">
+          Stan has worked in aircraft, power plants, refineries, and more — and now he’s ready to share his expertise at Crider’s Institute of Welding Technology.
+        </p>
+      </section>
+
+      {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-4 text-center">
           Welder Training in Kansas City, MO and the Surrounding Areas
