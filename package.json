@@ -4,12 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
-    "@netlify/next": "^1.4.9",
     "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
