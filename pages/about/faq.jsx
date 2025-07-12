@@ -1,31 +1,35 @@
-jsx
-import React from 'react';
-
 const FAQ = () => {
   return (
-    <div className="faq-container">
-      <h1>Frequently Asked Questions</h1>
+    <div className="max-w-3xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
 
-      <div className="faq-item">
-        <h2>Question 1: What is this service?</h2>
-        <p>Answer 1: This is a placeholder answer to a frequently asked question. You would provide the actual information here.</p>
+      <div className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">What is this program?</h2>
+        <p className="text-gray-700">
+          This is a placeholder answer to explain our welding programs and what students can expect. Detailed information will be provided here soon.
+        </p>
       </div>
 
-      <div className="faq-item">
-        <h2>Question 2: How do I get started?</h2>
-        <p>Answer 2: Another placeholder answer. Detail the steps for getting started with the service or product.</p>
+      <div className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">How do I get started?</h2>
+        <p className="text-gray-700">
+          We’ll outline clear steps for applying and enrolling. Stay tuned for a complete admissions guide.
+        </p>
       </div>
 
-      <div className="faq-item">
-        <h2>Question 3: What are the pricing options?</h2>
-        <p>Answer 3: Placeholder answer regarding pricing. Outline different pricing tiers or options.</p>
+      <div className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">What are the tuition and payment options?</h2>
+        <p className="text-gray-700">
+          We offer flexible payment plans and financing options. Full details will be available here soon.
+        </p>
       </div>
 
-      <div className="faq-item">
-        <h2>Question 4: Can I get a refund?</h2>
-        <p>Answer 4: Placeholder answer about your refund policy. Explain the terms and conditions for refunds.</p>
+      <div>
+        <h2 className="text-xl font-semibold mb-2">What is the refund policy?</h2>
+        <p className="text-gray-700">
+          We’ll share our full refund and withdrawal policies soon. Please contact our team with any immediate questions.
+        </p>
       </div>
-
     </div>
   );
 };
