@@ -4,7 +4,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   {
     name: 'Welding Courses',
-    href: '/welding/master', // Parent link can go to a default page or be just a label
+    href: '/welding/master',
     children: [
       { name: 'Master', href: '/welding/master' },
       { name: 'Hobby', href: '/welding/hobby' },
@@ -12,7 +12,7 @@ const navLinks = [
   },
   {
     name: 'Admissions',
-    href: '/admissions/choosing', // Parent link
+    href: '/admissions/choosing',
     children: [
       { name: 'Choosing', href: '/admissions/choosing' },
       { name: 'Information', href: '/admissions/information' },
@@ -21,17 +21,17 @@ const navLinks = [
   },
   {
     name: 'Payment',
-    href: '/payment/financing', // Parent link
+    href: '/payment/financing',
     children: [
       { name: 'Financing', href: '/payment/financing' },
       { name: 'Store', href: '/payment/store' },
     ],
   },
-  { name: 'Request Tour', href: '/request-a-tour' }, // Using the directory path, Next.js will find index.jsx
-  { name: 'Reviews', href: '/reviews' }, // Using the directory path, Next.js will find index.jsx
+  { name: 'Request Tour', href: '/request-a-tour' },
+  { name: 'Reviews', href: '/reviews' },
   {
     name: 'About',
-    href: '/about/blog', // Parent link
+    href: '/about/blog',
     children: [
       { name: 'Blog', href: '/about/blog' },
       { name: 'FAQ', href: '/about/faq' },
@@ -44,22 +44,24 @@ export default function Navbar() {
   return (
     <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
       <div className="font-bold">Crider’s Institute</div>
-      <ul className="flex space-x-4">
+      <ul className="flex space-x-6">
         {navLinks.map((link) => (
-          <li key={link.name}>
-            {link.children ? (
-              <div> {/* This div acts as the dropdown container/trigger */}
-                <Link href={link.href}>{link.name}</Link> {/* Parent link */}
-                <ul className="absolute hidden"> {/* This ul is the dropdown content - needs styling and JS for display */}
-                  {link.children.map((child) => (
-                    <li key={child.name}>
-                      <Link href={child.href}>{child.name}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : (
-              <Link href={link.href}>{link.name}</Link>
+          <li
+            key={link.name}
+            className={`nav-item ${link.children ? 'dropdown relative group' : ''}`}
+          >
+            <Link href={link.href} className="hover:text-blue-600 font-medium">
+              {link.name}
+            </Link>
+
+            {link.children && (
+              <ul className="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow-md">
+                {link.children.map((child) => (
+                  <li key={child.name} className="px-4 py-2 hover:bg-gray-100">
+                    <Link href={child.href}>{child.name}</Link>
+                  </li>
+                ))}
+              </ul>
             )}
           </li>
         ))}
