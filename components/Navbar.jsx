@@ -24,16 +24,31 @@ const navLinks = [
       { name: 'Store', href: '/payment/store' },
     ],
   },
-  { name: 'Request Tour', href: '/request-a-tour' },
-  { name: 'Reviews', href: '/reviews' },
   {
-    name: 'About',
+    name: 'Request Tour',
+    children: [
+      { name: 'Request Tour', href: '/request-a-tour' },,
+    ],
+  },
+  {
+    name: 'Reviews',
+    children: [
+      { name: 'Reviews', href: '/reviews' },
+    ],
+  },
+  {
+    name: 'About Us',
     children: [
       { name: 'Blog', href: '/about/blog' },
       { name: 'FAQ', href: '/about/faq' },
     ],
   },
-  { name: 'Contact', href: '/contact' },
+  {
+    name: 'Contact Us',
+    children: [
+      { name: 'Contact', href: '/contact' },
+    ],
+  },
 ];
 
 export default function Navbar() {
