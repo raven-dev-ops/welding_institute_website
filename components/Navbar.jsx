@@ -27,13 +27,13 @@ const navLinks = [
   {
     name: 'Request Tour',
     children: [
-      { name: 'Request Tour', href: '/request-a-tour' },,
+      { name: 'Request Tour', href: '/request-tour/tour-form' },,
     ],
   },
   {
     name: 'Reviews',
     children: [
-      { name: 'Reviews', href: '/reviews' },
+      { name: 'Reviews', href: '/reviews/reviews' },
     ],
   },
   {
@@ -46,7 +46,7 @@ const navLinks = [
   {
     name: 'Contact Us',
     children: [
-      { name: 'Contact', href: '/contact' },
+      { name: 'Contact', href: '/contact-us/contact' },
     ],
   },
 ];
