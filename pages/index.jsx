@@ -18,16 +18,6 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4 text-center">
-          Welder Training in Kansas City, MO and the Surrounding Areas
-        </h1>
-        <p className="text-lg text-center text-gray-700 mb-2">
-          Locally Owned Since 2015 | Free Tours | Competitive Class Rates
-        </p>
-        <p className="text-center text-xl font-semibold mb-6">
-          📞 (816) 992-4046
-        </p>
-
         <div className="text-base text-gray-700 space-y-4 mb-10">
           <p>
             Enroll in Our Master Welding and Hobby Welding Programs

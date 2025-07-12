@@ -1,8 +1,20 @@
-import Navbar from "@components/Navbar"
+import Navbar from '@components/Navbar';
 
-export default function Header() {
+export default function Header({ pageTitle }) {
   return (
     <header className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-4 text-center">
+        <h1 className="text-xl font-bold">
+          {pageTitle || "Crider's Institute of Welding"}
+        </h1>
+        <p className="text-sm">
+          Locally Owned Since 2015 | Free Tours | Competitive Class Rates
+        </p>
+        <p className="text-lg font-semibold mt-1">
+          📞 (816) 992-4046
+        </p>
+      </div>
+
       <Navbar />
     </header>
   );
