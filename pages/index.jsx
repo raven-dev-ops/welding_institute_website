@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <Layout pageTitle="Crider’s Institute of Welding">
+    <Layout pageTitle="Crider’s Institute of Welding & Technology">
       {/* Meet Stan Section */}
       <section className="max-w-4xl mx-auto px-4 py-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Stan Crider</h2>

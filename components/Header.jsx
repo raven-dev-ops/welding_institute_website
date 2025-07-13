@@ -6,10 +6,10 @@ export default function Header({ pageTitle }) {
       {/* Top Bar */}
       <div className="container mx-auto px-4 py-4 text-center">
         <h1 className="text-xl font-bold">
-          {pageTitle || "Crider's Institute of Welding"}
+          {pageTitle || "Crider's Institute of Welding & Technology"}
         </h1>
         <p className="text-sm">
-          Locally Owned Since 2015 | Free Tours | Competitive Class Rates
+          Est. 2015 | Free Tours | Veteran Approved | AWS Certified | KCMO #1 Welding Choice
         </p>
         <p className="text-lg font-semibold mt-1">
           📞 (816) 992-4046
