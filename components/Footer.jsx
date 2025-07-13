@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-8 text-center text-xs text-gray-400">
-        &copy; {new Date().getFullYear()} Crider&apos;s Institute. All rights reserved.
+        &copy; {new Date().getFullYear()} Crider&apos;s Institute of Welding & Technology. All rights reserved.
       </div>
     </footer>
   );

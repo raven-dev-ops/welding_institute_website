@@ -54,7 +54,7 @@ const navLinks = [
 export default function Navbar() {
   return (
     <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div className="font-bold">Crider’s Institute</div>
+      <div className="font-bold"></div>
       <ul className="flex space-x-6">
         {navLinks.map((link) => (
           <li
