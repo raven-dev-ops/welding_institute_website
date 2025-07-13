@@ -1,3 +1,33 @@
+/* Import Tailwind base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* --- Optional: Add your own global styles below --- */
+
+/* Example: Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Example: Body defaults */
+body {
+  @apply bg-white text-gray-800 antialiased;
+}
+
+/* Example: Link styles */
+a {
+  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+}
+
+/* --- react-slick slider arrows & dots (optional tweaks) --- */
+/* The core slick-carousel styles are imported in _app.js,
+   so here you can add overrides if you want. */
+
+.slick-dots li button:before {
+  color: #1e40af; /* Tailwind blue-800 for example */
+}
+
+.slick-slide {
+  outline: none; /* Remove default outline when slide is focused */
+}
