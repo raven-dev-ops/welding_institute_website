@@ -21,7 +21,7 @@ const navLinks = [
     name: 'Payment',
     children: [
       { name: 'Financing', href: '/payment/financing' },
-      { name: 'Store', href: '/payment/store' },
+      { name: 'Online Deposits', href: '/payment/deposits' },
     ],
   },
   {
