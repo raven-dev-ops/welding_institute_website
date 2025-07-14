@@ -11,9 +11,9 @@ export default function Header({ pageTitle }) {
         <p className="text-sm text-gray-600">
           Est. 2015 | Free Tours | Veteran Approved | AWS Certified | Master Classes
         </p>
-        <p className="text-lg font-semibold mt-1 text-ciwt-dark">
+        <a href="tel:8169924046" className="text-lg font-semibold mt-1 text-ciwt-dark">
           📞 (816) 992-4046
-        </p>
+        </a>
       </div>
 
       {/* Navbar always visible under header */}
