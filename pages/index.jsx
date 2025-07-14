@@ -140,7 +140,7 @@ export default function Home() {
               <div key={idx} className="px-4">
                 <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white flex flex-col justify-between h-full">
                   <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow leading-relaxed">
- \"{review.quote}\"
+ &quot;{review.quote}&quot;
                   </p>
                   <p className="text-sm font-semibold text-gray-600 text-right mt-auto mt-auto">
                     — {review.author}

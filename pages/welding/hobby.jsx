@@ -7,11 +7,11 @@ export default function Hobby() {
         <h1 className="text-4xl font-bold mb-4">Learn Welding as a Hobby With Our Program</h1>
 
         <p className="text-lg text-gray-700">
-          If you're looking to learn how to weld but not pursue the craft as a career, Crider's Institute of Welding Technology can help you with our hobby welding program.
-          You'll get hands-on training to learn the basics of welding and develop your skills.
+          If you&apos;re looking to learn how to weld but not pursue the craft as a career, Crider&apos;s Institute of Welding Technology can help you with our hobby welding program.
+          You&apos;ll get hands-on training to learn the basics of welding and develop your skills.
           We can help you complete all the necessary paperwork needed for your admission.
-          This is a great option for anyone who's curious about welding as a hobby or perhaps even as a side gig.
-          Our hobby welding classes in Kansas City, MO are the most valuable welding courses you'll find in this area and any of the surrounding communities.
+          This is a great option for anyone who&apos;s curious about welding as a hobby or perhaps even as a side gig.
+          Our hobby welding classes in Kansas City, MO are the most valuable welding courses you&apos;ll find in this area and any of the surrounding communities.
           Our experts are eager to help you learn, grow, and explore the fascinating world of welding!
         </p>
 
@@ -19,14 +19,14 @@ export default function Hobby() {
           Contact us today for a free tour! We return all calls and emails on the same day.
           We have free parking available for your convenience.
           Come check us out and learn why we provide the most sought-after welding classes in Kansas City, MO and the nearby areas.
-          Crider's Institute of Welding Technology is the ultimate place for professional and personal development in the field of welding.
+          Crider&apos;s Institute of Welding Technology is the ultimate place for professional and personal development in the field of welding.
         </p>
 
         <h2 className="text-2xl font-bold">Explore Fun and Creative Hobby Welding Projects</h2>
 
         <p>
           Welding allows you to unleash your creativity while mastering valuable skills.
-          Whether you're aiming to craft functional items or artistic pieces, the possibilities are endless.
+          Whether you&apos;re aiming to craft functional items or artistic pieces, the possibilities are endless.
           Here are some fantastic welding projects you can try:
         </p>
 

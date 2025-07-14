@@ -29,13 +29,12 @@ export default function InfoBlock({
       >
         {/* Image container with responsive width */}
         <div className="w-full md:w-1/2 flex-shrink-0">
-          <img
-            src={imageSrc} // Consider converting imageSrc to a static import for better optimization with next/image
-            width={600} // Provide actual width of the image
-            height={400} // Provide actual height of the image
+          <Image
+ src={imageSrc} // Consider converting imageSrc to a static import for better optimization with next/image
             alt={imageAlt}
-            className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl border-4 border-white"
+            className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl border-4 border-white relative"
             loading="lazy"
+            fill
           />
         </div>
         <div className="w-full md:w-1/2 px-4">
