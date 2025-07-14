@@ -2,7 +2,7 @@ import Layout from '@components/Layout';
 
 export default function Deposits() {
   return (
-    <Layout pageTitle="CWIT Program Reservations">
+    <Layout pageTitle="CIWT Program Reservations">
       <div className="max-w-3xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold mb-4">Hobby & Master Welding Class Deposits</h1>
 

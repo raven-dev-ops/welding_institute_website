@@ -9,7 +9,7 @@ export default function Header({ pageTitle }) {
           {pageTitle || "Crider's Institute of Welding Technology"}
         </h1>
         <p className="text-sm">
-          Est. 2015 | Free Tours | Veteran Approved | AWS Certified | Masterclasses
+          Est. 2015 | Free Tours | Veteran Approved | AWS Certified | Master Classes
         </p>
         <p className="text-lg font-semibold mt-1">
           📞 (816) 992-4046

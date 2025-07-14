@@ -2,7 +2,7 @@ import Layout from '@components/Layout';
 
 export default function Choosing() {
   return (
-    <Layout pageTitle="Choosing Your Career Path">
+    <Layout pageTitle="CIWT Choosing Your Career Path">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold mb-6">Find Your New Vocation With Us</h1>
 
