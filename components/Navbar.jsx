@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -53,8 +54,13 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div className="font-bold"></div>
+    <nav className="container mx-auto px-4 py-4 flex justify-between items-center bg-white">
+      
+ <Image
+ src="/images/ciwt_logo/logo-b9339ab0-228w.png"
+ alt="CIWT Logo"
+ width={100}
+ height={50} />
       <ul className="flex space-x-6">
         {navLinks.map((link) => (
           <li
