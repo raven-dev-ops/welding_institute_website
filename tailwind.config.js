@@ -8,16 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'ciwt-dark': '#000100',
-        'ciwt-blue': '#1329E5',
-        'ciwt-gold': '#FEBE0F',
-        'ciwt-green': '#68FE03',
-        'ciwt-red': '#FA0231',
-        'ciwt-gray': '#93A4A8',
-        'ciwt-accent': '#5CA701',
+ primary: '#F97316',     // Orange for primary accents
+ secondary: '#334155'    // e.g. Slate 800 for secondary accents
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+ sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
       },
     },
   },

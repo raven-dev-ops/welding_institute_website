@@ -5,7 +5,7 @@ export default function Header({ pageTitle }) {
     <header className="bg-gray-100 text-gray-800">
       {/* Top Bar */}
       <div className="container mx-auto px-4 py-4 text-center">
-        <h1 className="text-2xl font-bold text-white">
+        <h1 className="text-2xl font-bold text-gray-900">
           {pageTitle || "Crider's Institute of Welding Technology"}
         </h1>
         <p className="text-sm text-gray-600">

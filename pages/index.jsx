@@ -97,14 +97,14 @@ export default function Home() {
               width={600} // Adjust width and height as needed
               height={400} // Adjust width and height as needed
             />
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">Master Welders Program</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">Master Welders Program</h3>
             <p className="text-gray-800 mb-4 text-center text-lg leading-relaxed">
               Become a master certified welder in as little as 16 weeks.
               Get the guidance you need to advance your skills and start your career.
             </p>
             <Link
               href="/welding/master"
-              className="inline-block bg-ciwt-blue text-white px-4 py-2 rounded hover:bg-ciwt-gold hover:text-ciwt-dark transition"
+              className="inline-block bg-primary text-white font-semibold rounded-md px-4 py-2 hover:bg-secondary transition-colors duration-300"
             >
               Learn More
             </Link>
@@ -119,13 +119,13 @@ export default function Home() {
               width={600} // Adjust width and height as needed
               height={400} // Adjust width and height as needed
             />
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">Hobby Welding Classes</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">Hobby Welding Classes</h3>
             <p className="text-gray-800 mb-4 text-center text-lg leading-relaxed">
               Learn welding for fun or small projects. Perfect for hobbyists — no experience needed!
             </p>
             <Link
               href="/welding/hobby"
-              className="inline-block bg-ciwt-blue text-white px-4 py-2 rounded hover:bg-ciwt-gold hover:text-ciwt-dark transition"
+              className="inline-block bg-primary text-white font-semibold rounded-md px-4 py-2 hover:bg-secondary transition-colors duration-300"
             >
               Learn More
             </Link>
