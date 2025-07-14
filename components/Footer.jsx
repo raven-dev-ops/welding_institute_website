@@ -1,20 +1,20 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white px-4 py-12">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center items-start md:items-center md:space-x-12 space-y-8 md:space-y-0 text-center md:text-left text-sm">
-        
+    <footer className="bg-gray-100 text-gray-800 px-4 py-12">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center items-start md:items-start md:space-x-12 space-y-8 md:space-y-0 text-center md:text-left">
+
         {/* VISIT US */}
         <div>
-          <h3 className="text-lg font-bold mb-2">VISIT US</h3>
-          <p>Crider&apos;s Institute of Welding Technology</p>
-          <p>300 NW Jefferson</p>
-          <p>Grain Valley, MO 64029</p>
+          <h3 className="text-ciwt-blue text-xl font-bold mb-2">VISIT US</h3>
+          <p className="text-base">Crider&apos;s Institute of Welding Technology</p>
+          <p className="text-base">300 NW Jefferson</p>
+          <p className="text-base">Grain Valley, MO 64029</p>
           <p className="mt-1">
             <a
               href="https://www.google.com/maps/search/?api=1&query=300+NW+Jefferson+Grain+Valley+MO+64029"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 underline hover:text-blue-300"
+              className="text-ciwt-blue hover:text-ciwt-gold underline"
             >
               Get Directions
             </a>
@@ -23,11 +23,11 @@ export default function Footer() {
 
         {/* HOURS */}
         <div>
-          <h3 className="text-lg font-bold mb-2">HOURS</h3>
-          <p>Mon - Fri: 7:00 am - 10:00 pm</p>
-          <p>Sat: Closed</p>
-          <p>Sun: Closed</p>
-          <p className="mt-2">Call us today to schedule a free tour!</p>
+          <h3 className="text-ciwt-blue text-xl font-bold mb-2">HOURS</h3>
+          <p className="text-base">Mon - Fri: 7:00 am - 10:00 pm</p>
+          <p className="text-base">Sat: Closed</p>
+          <p className="text-base">Sun: Closed</p>
+          <p className="text-base mt-2">Call us today to schedule a free tour!</p>
         </div>
 
         {/* CONTACT US */}
@@ -41,7 +41,7 @@ export default function Footer() {
 
       </div>
 
-      <div className="mt-8 text-center text-xs text-gray-400">
+      <div className="mt-8 text-center text-sm text-gray-600">
         &copy; {new Date().getFullYear()} Crider&apos;s Institute of Welding Technology. All rights reserved.
       </div>
     </footer>
