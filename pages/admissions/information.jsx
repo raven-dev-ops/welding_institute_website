@@ -7,7 +7,7 @@ export default function Information() {
         <h1 className="text-3xl font-bold mb-6">Admissions Information</h1>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">Admission Requirements and Costs</h2>
+          <h2 className="text-2xl font-semibold mb-2">Requirements and Costs</h2>
           <p className="text-gray-700 mb-4">
             Prospective students may call or come to Crider&apos;s Institute of Welding Technology
             at any time to take a tour of the facility and speak to the administrator and faculty.
