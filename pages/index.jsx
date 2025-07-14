@@ -88,7 +88,7 @@ export default function Home() {
       {/* Programs Section */}
       <div className="max-w-5xl mx-auto px-4 pb-20">
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Card 1 */}
+ {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
             <Image
               src="/images/ciwt_photos/3-1920w.jpg"
