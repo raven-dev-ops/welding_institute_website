@@ -2,7 +2,7 @@ import Layout from '@components/Layout';
 
 export default function Hobby() {
   return (
-    <Layout pageTitle="Hobby Welding Courses - Crider's Institute">
+    <Layout pageTitle="CIWT - Hobby Welding Courses">
       <div className="max-w-5xl mx-auto px-4 py-16 space-y-6">
         <h1 className="text-4xl font-bold mb-4">Learn Welding as a Hobby With Our Program</h1>
 
