@@ -51,7 +51,6 @@ a:hover, a:focus {
 
 /* Buttons */
 button, .btn {
-  @apply px-4 py-2 rounded-lg shadow font-semibold;
   background: var(--ciwt-blue);
   color: #fff;
   border: none;
@@ -97,7 +96,6 @@ section {
 
 /* Example for hero section styling */
 .hero-section {
-  @apply text-white flex items-center justify-center min-h-[340px] rounded-2xl;
   background: linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%);
   position: relative;
   overflow: hidden;
