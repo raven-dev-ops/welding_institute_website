@@ -2,7 +2,7 @@ import Layout from '@components/Layout';
 
 export default function MasterWelding() {
   return (
-    <Layout pageTitle="CIWT | Master Welder Program">
+    <Layout pageTitle="CIWT Master Welder Program">
       <div className="max-w-5xl mx-auto px-4 py-16 space-y-8">
         <h1 className="text-4xl font-bold mb-4">Master Welding Program</h1>
         <p className="text-lg text-gray-700">

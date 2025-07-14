@@ -2,7 +2,7 @@ import Layout from '@components/Layout';
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout pageTitle="CIWT Business Information">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
 

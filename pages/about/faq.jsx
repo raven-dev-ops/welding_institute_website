@@ -62,10 +62,9 @@ export default function FAQ() {
   };
 
   return (
-    <Layout>
+    <Layout pageTitle="CIWT Frequently Asked Questions">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold mb-8 text-center">
-          Frequently Asked Questions
         </h1>
 
         <div className="space-y-4">

@@ -2,9 +2,9 @@ import Layout from '@components/Layout';
 
 export default function Deposits() {
   return (
-    <Layout>
+    <Layout pageTitle="CWIT Program Reservations">
       <div className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-4">Program Deposits</h1>
+        <h1 className="text-3xl font-bold mb-4">Hobby & Master Welding Class Deposits</h1>
 
         <p className="text-lg text-gray-700 mb-6">
           Secure your spot in our popular welding programs with a simple deposit. Below are the current deposit amounts for our training courses.

@@ -2,10 +2,9 @@ import Layout from '@components/Layout';
 
 export default function Policies() {
   return (
-    <Layout>
+    <Layout pageTitle="CIWT Policies & Code of Conduct">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold mb-6">
-          Learn More About Our Policies and Codes of Conduct
         </h1>
         <p className="text-lg text-gray-700 mb-8">
           At Crider&apos;s Institute of Welding Technology, we&apos;ve been training welders for successful careers since 2015.

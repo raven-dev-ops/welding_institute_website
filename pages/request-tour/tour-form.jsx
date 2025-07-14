@@ -2,9 +2,9 @@ import Layout from '@components/Layout';
 
 export default function RequestTour() {
   return (
-    <Layout>
+    <Layout pageTitle="CIWT Shop & Campus Tour">
       <div className="max-w-xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-6 text-center">Schedule a Campus Tour</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">Schedule Your Facility Tour Today!</h1>
         <p className="text-gray-700 mb-8 text-center">
           Tours are available Monday–Friday, 12pm to 6pm. Please choose your preferred date and time.
         </p>
