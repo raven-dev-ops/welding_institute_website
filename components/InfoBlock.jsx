@@ -40,7 +40,7 @@ export default function InfoBlock({
         </div>
         <div className="w-full md:w-1/2 px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow">
-            {title}
+            <span className="text-gray-900">{title}</span>
           </h2>
           <div className="text-lg md:text-xl leading-relaxed text-gray-800">{children}</div>
         </div>
