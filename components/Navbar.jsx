@@ -47,7 +47,7 @@ export default function Navbar() {
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
             width={220}
-            height={60}
+            height={220}
             className="mb-4"
           />
         </Link>
