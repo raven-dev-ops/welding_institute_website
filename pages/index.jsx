@@ -39,7 +39,7 @@ export default function Home() {
     <Layout pageTitle="Crider’s Institute of Welding Technology">
       {/* Hero Banner */}
       <section className="flex flex-col items-center justify-center min-h-[320px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden" style={{ backgroundSize: 'cover', backgroundPosition: 'center', background: 'linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%)' }}>
- <Image
+        <Image
  src="/images/stock_photos/RSshutterstock_107051852-1920w.jpg"
  alt="Welding workshop"
  fill
@@ -47,8 +47,8 @@ export default function Home() {
  />
 
         <div className="bg-black bg-opacity-60 rounded-2xl px-8 py-12 text-center z-10 relative">
-          <h1 className="text-4xl font-bold mb-2">Welcome to Crider Institute of Welding Technology</h1>
-          <p className="text-xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 text-ciwt-blue">Welcome to Crider Institute of Welding Technology</h1>
+          <p className="text-xl md:text-2xl leading-relaxed">
             Launching successful welding careers since 1990
           </p>
         </div>
@@ -88,38 +88,44 @@ export default function Home() {
       {/* Programs Section */}
       <div className="max-w-5xl mx-auto px-4 pb-20">
         <div className="grid md:grid-cols-2 gap-8">
+          {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
-            <img
+            <Image
               src="/images/ciwt_photos/3-1920w.jpg"
               alt="Master welding student in workshop"
               className="w-full h-48 object-cover rounded-xl mb-4"
+              width={600} // Adjust width and height as needed
+              height={400} // Adjust width and height as needed
             />
-            <h3 className="text-xl font-bold mb-2">Master Welders Program</h3>
-            <p className="text-gray-700 mb-4 text-center">
+            <h3 className="text-xl md:text-2xl font-bold mb-2">Master Welders Program</h3>
+            <p className="text-gray-700 mb-4 text-center text-lg leading-relaxed">
               Become a master certified welder in as little as 16 weeks.
               Get the guidance you need to advance your skills and start your career.
             </p>
             <Link
               href="/welding/master"
-              className="inline-block bg-[color:var(--ciwt-blue)] text-white px-4 py-2 rounded hover:bg-[color:var(--ciwt-gold)] hover:text-ciwt-dark transition"
+              className="inline-block bg-ciwt-blue text-white px-4 py-2 rounded hover:bg-ciwt-gold hover:text-ciwt-dark transition"
             >
               Learn More
             </Link>
           </div>
 
+          {/* Card 2 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
-            <img
+            <Image
               src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg"
               alt="Hobby welding class"
               className="w-full h-48 object-cover rounded-xl mb-4"
+              width={600} // Adjust width and height as needed
+              height={400} // Adjust width and height as needed
             />
-            <h3 className="text-xl font-bold mb-2">Hobby Welding Classes</h3>
-            <p className="text-gray-700 mb-4 text-center">
+            <h3 className="text-xl md:text-2xl font-bold mb-2">Hobby Welding Classes</h3>
+            <p className="text-gray-700 mb-4 text-center text-lg leading-relaxed">
               Learn welding for fun or small projects. Perfect for hobbyists — no experience needed!
             </p>
             <Link
               href="/welding/hobby"
-              className="inline-block bg-[color:var(--ciwt-blue)] text-white px-4 py-2 rounded hover:bg-[color:var(--ciwt-gold)] hover:text-ciwt-dark transition"
+              className="inline-block bg-ciwt-blue text-white px-4 py-2 rounded hover:bg-ciwt-gold hover:text-ciwt-dark transition"
             >
               Learn More
             </Link>
@@ -128,15 +134,15 @@ export default function Home() {
 
         {/* Reviews Carousel */}
         <div className="max-w-4xl mx-auto mt-20 px-4">
-          <h2 className="text-2xl font-bold mb-6 text-center">What Our Students Say</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center text-ciwt-blue">What Our Students Say</h2>
           <Slider {...sliderSettings}>
             {reviews.map((review, idx) => (
               <div key={idx} className="px-4">
                 <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white flex flex-col justify-between h-full">
-                  <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow">
-                    “{review.quote}”
+                  <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow leading-relaxed">
+ \"{review.quote}\"
                   </p>
-                  <p className="text-sm font-semibold text-gray-600 text-right mt-auto">
+                  <p className="text-sm font-semibold text-gray-600 text-right mt-auto mt-auto">
                     — {review.author}
                   </p>
                 </div>

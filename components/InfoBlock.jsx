@@ -23,7 +23,7 @@ export default function InfoBlock({
     return (
       <section
         className={`
-          flex flex-col md:flex-row items-center gap-8 mb-12
+          flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-12
           ${reverse ? "md:flex-row-reverse" : ""}
         `}
       >
@@ -38,11 +38,11 @@ export default function InfoBlock({
             loading="lazy"
           />
         </div>
-        <div className="w-full md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[color:var(--ciwt-blue)] drop-shadow">
+        <div className="w-full md:w-1/2 px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-ciwt-blue drop-shadow">
             {title}
           </h2>
-          <div className="text-lg md:text-xl leading-relaxed">{children}</div>
+          <div className="text-lg md:text-xl leading-relaxed text-gray-800">{children}</div>
         </div>
       </section>
     );
