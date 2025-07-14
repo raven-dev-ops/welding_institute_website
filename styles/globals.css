@@ -3,31 +3,109 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- Optional: Add your own global styles below --- */
+/* --- Brand Colors as CSS Variables --- */
+:root {
+  --ciwt-dark: #000100;
+  --ciwt-blue: #1329E5;
+  --ciwt-gold: #FEBE0F;
+  --ciwt-green: #68FE03;
+  --ciwt-red: #FA0231;
+  --ciwt-gray: #93A4A8;
+  --ciwt-accent: #5CA701;
+}
 
 /* Example: Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Example: Body defaults */
+/* Set up the core body styles */
 body {
-  @apply bg-white text-gray-800 antialiased;
+  @apply antialiased font-sans;
+  background: linear-gradient(135deg, var(--ciwt-gray) 0%, #ffffff 100%);
+  color: var(--ciwt-dark);
+  min-height: 100vh;
 }
 
-/* Example: Link styles */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ciwt-blue);
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5em;
+}
+
+/* Links */
 a {
-  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+  color: var(--ciwt-blue);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: var(--ciwt-gold);
+  text-decoration: underline wavy;
 }
 
-/* --- react-slick slider arrows & dots (optional tweaks) --- */
-/* The core slick-carousel styles are imported in _app.js,
-   so here you can add overrides if you want. */
+/* Buttons */
+button, .btn {
+  @apply px-4 py-2 rounded-lg shadow font-semibold;
+  background: var(--ciwt-blue);
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--ciwt-accent);
+  color: var(--ciwt-dark);
+}
 
+/* Section styling */
+section {
+  background: rgba(255,255,255,0.97);
+  border-radius: 1rem;
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.06);
+  padding: 2.5rem 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Cards & highlights */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.07);
+  border-left: 5px solid var(--ciwt-blue);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Accent text */
+.accent {
+  color: var(--ciwt-gold);
+  font-weight: 600;
+}
+
+/* Utility: For using background images */
+.bg-hero {
+  background-image: url('/images/stock_photos/RSshutterstock_107051852-1920w.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+/* Example for future image use in a section */
+.hero-section {
+  @apply text-white flex items-center justify-center min-h-[340px] rounded-2xl;
+  background: linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slick slider (if used) */
 .slick-dots li button:before {
-  color: #1e40af; /* Tailwind blue-800 for example */
+  color: var(--ciwt-blue);
 }
 
 .slick-slide {
-  outline: none; /* Remove default outline when slide is focused */
+  outline: none;
 }
