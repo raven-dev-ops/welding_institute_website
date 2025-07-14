@@ -9,12 +9,12 @@ export default function MasterWelding() {
           Become a Master Welder in Four to Six Months With Our Classes
         </p>
         <p className="text-base text-gray-700">
-          Start your new career in welding with Crider&apos;s Institute of Welding Technology and our welding programs.
-          During our 16 to 24-week courses, you'll develop the necessary skills to become a certified welder.
+ Start your new career in welding with Crider&apos;s Institute of Welding Technology and our welding programs.
+ During our 16 to 24-week courses, you&apos;ll develop the necessary skills to become a certified welder.
           We look forward to helping you advance your career and become a great asset to any company you choose.
-          As the leading provider of welding classes in Columbia, MO and throughout the Kansas City metropolitan area,
-          Crider's Institute of Welding Technology is the wisest place to begin or advance your career in welding.
-          We look forward to revealing all the possibilities and potential within you! Let's get started today.
+ As the leading provider of welding classes in Columbia, MO and throughout the Kansas City metropolitan area,
+ Crider&apos;s Institute of Welding Technology is the wisest place to begin or advance your career in welding.
+ We look forward to revealing all the possibilities and potential within you! Let&apos;s get started today.
         </p>
 
         <h2 className="text-2xl font-bold">Programs Offered</h2>
