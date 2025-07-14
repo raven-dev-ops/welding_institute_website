@@ -1,5 +1,7 @@
 // components/InfoBlock.jsx
 
+import Image from 'next/image';
+
 /**
  * InfoBlock Component
  * Props:
@@ -17,6 +19,7 @@ export default function InfoBlock({
     children,
     reverse = false,
   }) {
+    // Base classes for the section, including responsive flex layout and gap
     return (
       <section
         className={`
@@ -24,9 +27,12 @@ export default function InfoBlock({
           ${reverse ? "md:flex-row-reverse" : ""}
         `}
       >
+        {/* Image container with responsive width */}
         <div className="w-full md:w-1/2 flex-shrink-0">
           <img
-            src={imageSrc}
+            src={imageSrc} // Consider converting imageSrc to a static import for better optimization with next/image
+            width={600} // Provide actual width of the image
+            height={400} // Provide actual height of the image
             alt={imageAlt}
             className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl border-4 border-white"
             loading="lazy"

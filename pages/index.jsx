@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import Link from "next/link";
 import Layout from "@components/Layout";
+import Image from 'next/image';
 import InfoBlock from "@components/InfoBlock";
 
 export default function Home() {
@@ -37,8 +38,15 @@ export default function Home() {
   return (
     <Layout pageTitle="Crider’s Institute of Welding Technology">
       {/* Hero Banner */}
-      <section className="hero-section bg-hero flex flex-col items-center justify-center min-h-[320px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden">
-        <div className="bg-black bg-opacity-60 rounded-2xl px-8 py-12 text-center z-10">
+      <section className="flex flex-col items-center justify-center min-h-[320px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden" style={{ backgroundSize: 'cover', backgroundPosition: 'center', background: 'linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%)' }}>
+ <Image
+ src="/images/stock_photos/RSshutterstock_107051852-1920w.jpg"
+ alt="Welding workshop"
+ fill
+ className="object-cover absolute inset-0 z-0"
+ />
+
+        <div className="bg-black bg-opacity-60 rounded-2xl px-8 py-12 text-center z-10 relative">
           <h1 className="text-4xl font-bold mb-2">Welcome to Crider Institute of Welding Technology</h1>
           <p className="text-xl">
             Launching successful welding careers since 1990
@@ -80,7 +88,7 @@ export default function Home() {
       {/* Programs Section */}
       <div className="max-w-5xl mx-auto px-4 pb-20">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="border p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
+          <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
             <img
               src="/images/ciwt_photos/3-1920w.jpg"
               alt="Master welding student in workshop"
@@ -93,13 +101,13 @@ export default function Home() {
             </p>
             <Link
               href="/welding/master"
-              className="inline-block bg-[color:var(--ciwt-blue)] text-white px-4 py-2 rounded hover:bg-[color:var(--ciwt-gold)] hover:text-black transition"
+              className="inline-block bg-[color:var(--ciwt-blue)] text-white px-4 py-2 rounded hover:bg-[color:var(--ciwt-gold)] hover:text-ciwt-dark transition"
             >
               Learn More
             </Link>
           </div>
 
-          <div className="border p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
+          <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
             <img
               src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg"
               alt="Hobby welding class"
@@ -111,7 +119,7 @@ export default function Home() {
             </p>
             <Link
               href="/welding/hobby"
-              className="inline-block bg-[color:var(--ciwt-blue)] text-white px-4 py-2 rounded hover:bg-[color:var(--ciwt-gold)] hover:text-black transition"
+              className="inline-block bg-[color:var(--ciwt-blue)] text-white px-4 py-2 rounded hover:bg-[color:var(--ciwt-gold)] hover:text-ciwt-dark transition"
             >
               Learn More
             </Link>
@@ -124,11 +132,11 @@ export default function Home() {
           <Slider {...sliderSettings}>
             {reviews.map((review, idx) => (
               <div key={idx} className="px-4">
-                <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white">
-                  <p className="text-gray-800 mb-4 text-lg italic leading-relaxed">
+                <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white flex flex-col justify-between h-full">
+                  <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow">
                     “{review.quote}”
                   </p>
-                  <p className="text-sm font-semibold text-gray-600 text-right">
+                  <p className="text-sm font-semibold text-gray-600 text-right mt-auto">
                     — {review.author}
                   </p>
                 </div>
