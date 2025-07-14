@@ -14,17 +14,19 @@
   --ciwt-accent: #5CA701;
 }
 
-/* Example: Smooth scroll behavior */
+/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Set up the core body styles */
+/* Global body styles - use Tailwind font stack directly */
 body {
-  @apply antialiased font-sans;
   background: linear-gradient(135deg, var(--ciwt-gray) 0%, #ffffff 100%);
   color: var(--ciwt-dark);
   min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Headings */
@@ -93,7 +95,7 @@ section {
   border-radius: 1rem;
 }
 
-/* Example for future image use in a section */
+/* Example for hero section styling */
 .hero-section {
   @apply text-white flex items-center justify-center min-h-[340px] rounded-2xl;
   background: linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%);
@@ -105,7 +107,6 @@ section {
 .slick-dots li button:before {
   color: var(--ciwt-blue);
 }
-
 .slick-slide {
   outline: none;
 }
