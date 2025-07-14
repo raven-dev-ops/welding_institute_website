@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// Navigation structure
 const navLinks = [
   { name: "Home", href: "/" },
   {
@@ -26,14 +25,8 @@ const navLinks = [
       { name: "Online Deposits", href: "/payment/deposits" },
     ],
   },
-  {
-    name: "Request Tour",
-    children: [{ name: "Request Tour", href: "/request-tour/tour-form" }],
-  },
-  {
-    name: "Reviews",
-    children: [{ name: "Reviews", href: "/reviews/reviews" }],
-  },
+  { name: "Request Tour", href: "/request-tour/tour-form" },
+  { name: "Reviews", href: "/reviews/reviews" },
   {
     name: "About Us",
     children: [
@@ -41,72 +34,52 @@ const navLinks = [
       { name: "FAQ", href: "/about/faq" },
     ],
   },
-  {
-    name: "Contact Us",
-    children: [{ name: "Contact", href: "/contact-us/contact" }],
-  },
+  { name: "Contact Us", href: "/contact-us/contact" },
 ];
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full px-4 py-4 flex justify-center items-center bg-white shadow-md z-50">
-      {/* Navbar background, padding, centering, fixed position, full width, and shadow */}
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="container mx-auto py-4 flex flex-col items-center">
+        {/* Logo */}
+        <Link href="/">
+          <Image
+            src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
+            width={220}
+            height={60}
+            alt="Logo"
+            className="mb-4"
+          />
+        </Link>
 
-      {/* Nav Links */}
-      <ul className="flex space-x-6">
-        {navLinks.map((link) => {
-          const isDropdown = link.children && link.children.length > 0;
+        {/* Navigation Links */}
+        <ul className="flex justify-center space-x-8">
+          {navLinks.map((link) => {
+            const isDropdown = link.children?.length;
 
-          return (
-            <li
-              key={link.name}
-              className={`nav-item ${isDropdown ? "relative group" : ""}`}
-            >
-              {isDropdown ? (
-                <button
-                  type="button"
-                  className="font-medium text-ciwt-dark hover:text-ciwt-blue flex items-center"
-                >
-                  {link.name}
-                  {/* Down arrow icon */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 ml-1"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              ) : (
-                <Link
-                  href={link.href}
-                  className="font-medium text-ciwt-dark hover:text-ciwt-blue"
-                >
+            return (
+              <li
+                key={link.name}
+                className="relative group py-2 hover:text-ciwt-blue"
+              >
+                <Link href={link.href || "#"} className="font-medium text-ciwt-dark">
                   {link.name}
                 </Link>
-              )}
 
-              {isDropdown && (
-                <ul className="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow-md">
-                  {link.children.map((child) => (
-                    <li
-                      key={child.name}
-                      className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
-                    >
-                      <Link href={child.href}>{child.name}</Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+                {isDropdown && (
+                  <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white border rounded shadow-lg">
+                    {link.children.map((child) => (
+                      <li key={child.name} className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap">
+                        <Link href={child.href}>{child.name}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 }
