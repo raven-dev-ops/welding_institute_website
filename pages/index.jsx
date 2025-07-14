@@ -47,7 +47,7 @@ export default function Home() {
  />
 
         <div className="bg-black bg-opacity-60 rounded-2xl px-8 py-12 text-center z-10 relative">
-          <h1 className="text-5xl md:text-6xl font-bold mb-2 text-ciwt-blue">Welcome to Crider Institute of Welding Technology</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 text-white">Welcome to Crider Institute of Welding Technology</h1>
           <p className="text-xl md:text-2xl leading-relaxed">
             Launching successful welding careers since 1990
           </p>
@@ -97,8 +97,8 @@ export default function Home() {
               width={600} // Adjust width and height as needed
               height={400} // Adjust width and height as needed
             />
-            <h3 className="text-xl md:text-2xl font-bold mb-2">Master Welders Program</h3>
-            <p className="text-gray-700 mb-4 text-center text-lg leading-relaxed">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">Master Welders Program</h3>
+            <p className="text-gray-800 mb-4 text-center text-lg leading-relaxed">
               Become a master certified welder in as little as 16 weeks.
               Get the guidance you need to advance your skills and start your career.
             </p>
@@ -119,8 +119,8 @@ export default function Home() {
               width={600} // Adjust width and height as needed
               height={400} // Adjust width and height as needed
             />
-            <h3 className="text-xl md:text-2xl font-bold mb-2">Hobby Welding Classes</h3>
-            <p className="text-gray-700 mb-4 text-center text-lg leading-relaxed">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">Hobby Welding Classes</h3>
+            <p className="text-gray-800 mb-4 text-center text-lg leading-relaxed">
               Learn welding for fun or small projects. Perfect for hobbyists — no experience needed!
             </p>
             <Link
@@ -134,7 +134,7 @@ export default function Home() {
 
         {/* Reviews Carousel */}
         <div className="max-w-4xl mx-auto mt-20 px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center text-ciwt-blue">What Our Students Say</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center text-white">What Our Students Say</h2>
           <Slider {...sliderSettings}>
             {reviews.map((review, idx) => (
               <div key={idx} className="px-4">

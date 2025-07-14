@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* VISIT US */}
         <div>
-          <h3 className="text-ciwt-blue text-xl font-bold mb-2">VISIT US</h3>
+          <h3 className="text-white text-xl font-bold mb-2">VISIT US</h3>
           <p className="text-base">Crider&apos;s Institute of Welding Technology</p>
           <p className="text-base">300 NW Jefferson</p>
           <p className="text-base">Grain Valley, MO 64029</p>
@@ -23,16 +23,16 @@ export default function Footer() {
 
         {/* HOURS */}
         <div>
-          <h3 className="text-ciwt-blue text-xl font-bold mb-2">HOURS</h3>
+          <h3 className="text-white font-bold text-xl mb-2">HOURS</h3>
           <p className="text-base">Mon - Fri: 7:00 am - 10:00 pm</p>
           <p className="text-base">Sat: Closed</p>
           <p className="text-base">Sun: Closed</p>
           <p className="text-base mt-2">Call us today to schedule a free tour!</p>
         </div>
 
-        {/* CONTACT US */}
+        {/* CONTACT US */} {/* This heading was already updated in the previous attempt, so the diff might not show changes here if the color was already text-white and font-bold. */}
         <div>
-          <h3 className="text-lg font-bold mb-2">CONTACT US</h3>
+          <h3 className="text-white text-xl font-bold mb-2">CONTACT US</h3>
           <p>Main: <a href="tel:8169924046" className="underline hover:text-blue-300">(816) 992-4046</a></p>
           <p>Alternate: <a href="tel:8168674024" className="underline hover:text-blue-300">(816) 867-4024</a></p>
           <p>Mobile: <a href="tel:8168852571" className="underline hover:text-blue-300">(816) 885-2571</a></p>

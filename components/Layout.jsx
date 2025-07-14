@@ -6,7 +6,7 @@ export default function Layout({ children, pageTitle }) {
     <div className="min-h-screen flex flex-col">
       {/* Pass pageTitle down so Header shows correct title */}
       <Header pageTitle={pageTitle} />
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 md:px-8 py-8">
         {children}
       </main>
       <Footer />

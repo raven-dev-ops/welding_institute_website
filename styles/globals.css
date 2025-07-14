@@ -21,7 +21,7 @@ html {
 
 /* Global body styles - use Tailwind font stack directly */
 body {
-  background: linear-gradient(135deg, var(--ciwt-gray) 0%, #ffffff 100%);
+  background-color: #ffffff;
   color: var(--ciwt-dark);
   min-height: 100vh;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
