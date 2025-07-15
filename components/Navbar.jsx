@@ -52,8 +52,8 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar */}
-        <div className="w-full bg-white">
+        {/* Nav Links */}
+        <div className="w-full bg-white shadow">
           <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-4 py-6 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
@@ -61,10 +61,7 @@ export default function Navbar() {
               return (
                 <li key={link.name} className="relative group">
                   {isDropdown ? (
-                    <button
-                      type="button"
-                      className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline"
-                    >
+                    <span className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer">
                       {link.name}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +75,7 @@ export default function Navbar() {
                           clipRule="evenodd"
                         />
                       </svg>
-                    </button>
+                    </span>
                   ) : (
                     <Link
                       href={link.href}
