@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Info Blocks and Cards in leveled container */}
+      {/* Info Blocks and Cards */}
       <div className="max-w-5xl mx-auto px-4">
         {/* Meet Stan Section */}
         <InfoBlock
@@ -75,12 +75,14 @@ export default function Home() {
           imageAlt="Stan Crider, Lead Welding Instructor"
           title="Meet Stan Crider"
         >
-
-          Stan Crider, Owner and Lead Instructor at Crider’s Institute of Welding Technology,
-          brings over 45 years of experience in nearly every aspect of the welding industry and
-          more than 25 years teaching in private schools and public colleges. He’s an AWS Certified
-          Welding Inspector & Educator whose career includes work in aircraft, power plants, and more.
-          Stan’s passion is helping students build real-world skills and confidence for a rewarding career.
+          <div className="prose prose-neutral max-w-none">
+            <p>
+              Stan Crider, Owner and Lead Instructor at Crider’s Institute of Welding Technology, brings over 45 years of experience in nearly every aspect of the welding industry and more than 25 years teaching in private schools and public colleges.
+            </p>
+            <p>
+              He’s an AWS Certified Welding Inspector & Educator whose career includes work in aircraft, power plants, and more. Stan’s passion is helping students build real-world skills and confidence for a rewarding career.
+            </p>
+          </div>
         </InfoBlock>
 
         {/* Enrollment Info */}
@@ -89,16 +91,17 @@ export default function Home() {
           imageAlt="Hands-on welding in class"
           title="Master & Hobby Welding Programs"
         >
-
-          At Crider&apos;s Institute of Welding Technology, you can become a certified welder in
-          as little as 4 months with our 16-week program or gain advanced pipe welding
-          certification with our 24-week option. Flexible schedules and tuition assistance available!<br /><br />
-          Our training is 80% hands-on. Our 12:1 student-to-instructor
-          ratio ensures personalized training with our experienced team. This is what makes CIWT
-          the top choice for welding training in Kansas City and beyond.<br /><br />
-          Whether you’re a recent high school grad, military veteran, or changing careers,
-          our welding program opens doors to opportunities in automotive, shipbuilding,
-          aircraft, and more.
+          <div className="prose prose-neutral max-w-none">
+            <p>
+              At Crider&apos;s Institute of Welding Technology, you can become a certified welder in as little as 4 months with our 16-week program or gain advanced pipe welding certification with our 24-week option. Flexible schedules and tuition assistance available!
+            </p>
+            <p>
+              Our training is 80% hands-on. Our 12:1 student-to-instructor ratio ensures personalized training with our experienced team. This is what makes CIWT the top choice for welding training in Kansas City and beyond.
+            </p>
+            <p>
+              Whether you’re a recent high school grad, military veteran, or changing careers, our welding program opens doors to opportunities in automotive, shipbuilding, aircraft, and more.
+            </p>
+          </div>
         </InfoBlock>
 
         {/* Programs Section */}
