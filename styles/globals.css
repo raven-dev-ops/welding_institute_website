@@ -14,21 +14,20 @@
   --ciwt-accent: #5CA701;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Global body styles */
 body {
   background-color: #ffffff;
   color: var(--ciwt-dark);
-  min-height: 100vh;
-  text-size-adjust: 100%;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-top: 120px; /* Ensures content clears fixed navbar height */
+  padding-top: 0 px; /* Ensures content clears fixed navbar height */
 }
 
 /* Ensure fixed navbar always stays on top */
