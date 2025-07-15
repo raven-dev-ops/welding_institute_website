@@ -42,7 +42,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="flex flex-col items-center w-full">
         {/* Logo */}
-        <Link href="/" className="pt-4 pb-2">
+        <Link href="/" className="pb-2">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -52,10 +52,10 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar with solid white background */}
-        <div className="w-full bg-white border-t border-gray-200">
-          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 py-2">
-            {navLinks.map((link) => { // Reduced py-4 to py-3 for tighter spacing
+        {/* Nav Links Bar with extra top/bottom padding and no border */}
+        <div className="w-full bg-white">
+          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 py-6">
+            {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
 
               return (
@@ -68,7 +68,7 @@ export default function Navbar() {
                   </Link>
 
                   {isDropdown && (
-                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white border rounded shadow-lg z-50">
+                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-4 rounded shadow-lg z-50">
                       {link.children.map((child) => (
                         <li
                           key={child.name}
