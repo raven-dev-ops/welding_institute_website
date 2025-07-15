@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
-        {/* Logo with tighter spacing */}
+        {/* Logo */}
         <Link href="/" className="pt-2 pb-1">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
@@ -51,13 +51,11 @@ export default function Navbar() {
             priority
           />
         </Link>
-
-        {/* Nav Links Bar with tighter gap */}
+        {/* Navbar Links */}
         <div className="w-full bg-white shadow">
           <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-4 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
-
               return (
                 <li key={link.name} className="relative group">
                   {isDropdown ? (
@@ -86,17 +84,20 @@ export default function Navbar() {
                   )}
 
                   {isDropdown && (
-                    <ul className={`
-                      absolute left-1/2 transform -translate-x-1/2 mt-2 w-max px-0
-                      bg-white shadow-2xl rounded-2xl
-                      group-hover:opacity-100 group-hover:translate-y-0
-                      opacity-0 pointer-events-none group-hover:pointer-events-auto
-                      group-hover:visible invisible
-                      transition-all duration-300 ease-out
-                      z-50
-                      py-0.5
-                      list-none
-                    `}>
+                    <ul
+                      className={`
+                        absolute left-1/2 transform -translate-x-1/2 mt-2 w-max px-0
+                        bg-white shadow-2xl rounded-2xl
+                        group-hover:opacity-100 group-hover:translate-y-0
+                        opacity-0 pointer-events-none group-hover:pointer-events-auto
+                        group-hover:visible invisible
+                        transition-all duration-300 ease-out
+                        z-50
+                        py-0.5
+                        list-none
+                      `}
+                      style={{ backgroundColor: "#fff" }} // <- extra assurance, force white
+                    >
                       {link.children.map((child, idx) => (
                         <li
                           key={child.name}
