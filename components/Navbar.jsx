@@ -28,13 +28,13 @@ const navLinks = [
   { name: "Request Tour", href: "/request-tour/tour-form" },
   { name: "Reviews", href: "/reviews/reviews" },
   {
-    name: "About Us",
+    name: "About",
     children: [
       { name: "Blog", href: "/about/blog" },
       { name: "FAQ", href: "/about/faq" },
     ],
   },
-  { name: "Contact Us", href: "/contact-us/contact" },
+  { name: "Contact", href: "/contact-us/contact" },
 ];
 
 export default function Navbar() {
@@ -86,7 +86,7 @@ export default function Navbar() {
                   )}
 
                   {isDropdown && (
-                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-4 rounded shadow-xl z-50 list-none">
+                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white border border-gray-200 py-4 rounded shadow-xl z-50 list-none">
                       {link.children.map((child) => (
                         <li
                           key={child.name}
