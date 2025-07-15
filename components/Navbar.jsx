@@ -96,7 +96,7 @@ export default function Navbar() {
                         py-0.5
                         list-none
                       `}
-                      style={{ backgroundColor: "#fff" }} // <- extra assurance, force white
+                      style={{ backgroundColor: "#fff" }}
                     >
                       {link.children.map((child, idx) => (
                         <li
