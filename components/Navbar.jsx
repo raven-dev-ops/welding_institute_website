@@ -46,8 +46,8 @@ export default function Navbar() {
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
-            width={240}
-            height={220}
+            width={180}
+            height={120}
             priority
           />
         </Link>
