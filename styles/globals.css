@@ -16,7 +16,7 @@
 
 /* Universal box-sizing (if not already set) */
 *, *::before, *::after {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Smooth scroll behavior */
@@ -25,8 +25,8 @@ html {
 }
 
 html, body {
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Set global font family and smoothing */
@@ -36,20 +36,17 @@ body {
   font-family: "Roboto Condensed", "Roboto Condensed Fallback", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
-  color: rgb(0, 0, 0);
   font-size: 17px;
   overflow-wrap: break-word;
 }
 
-/* Set global font-weight for headings */
+/* Set global font-weight for headings (NO color, so Tailwind utilities work) */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Condensed", "Roboto Condensed Fallback", Arial, Helvetica, sans-serif;
   font-weight: 700; /* bold, adjust to 600 for semi-bold if preferred */
   letter-spacing: 0.01em; /* optional: tightens heading letter spacing */
-  color: rgb(0, 0, 0); /* ensures headings use your brand color */
   margin-top: 0; /* optional: remove default top margin */
   margin-bottom: 0.5em; /* consistent bottom spacing */
-
 }
 
 /* Ensure fixed navbar always stays on top */
