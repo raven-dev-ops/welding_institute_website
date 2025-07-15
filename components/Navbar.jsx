@@ -52,9 +52,9 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar with tighter vertical gap */}
+        {/* Nav Links Bar with tighter gap */}
         <div className="w-full bg-white shadow">
-          <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-2 py-4 list-none">
+          <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-4 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
 
@@ -88,20 +88,20 @@ export default function Navbar() {
                   {isDropdown && (
                     <ul className={`
                       absolute left-1/2 transform -translate-x-1/2 mt-2 w-max px-0
-                      bg-white bg-opacity-95 shadow-2xl rounded-2xl
+                      bg-white shadow-2xl rounded-2xl
                       group-hover:opacity-100 group-hover:translate-y-0
                       opacity-0 pointer-events-none group-hover:pointer-events-auto
                       group-hover:visible invisible
                       transition-all duration-300 ease-out
                       z-50
-                      py-1
+                      py-0.5
                       list-none
                     `}>
                       {link.children.map((child, idx) => (
                         <li
                           key={child.name}
                           className={`
-                            px-5 py-2 text-lg font-bold text-ciwt-dark 
+                            px-4 py-1 text-lg font-bold text-ciwt-dark 
                             hover:bg-blue-50 hover:text-ciwt-blue
                             transition-colors duration-150 cursor-pointer whitespace-nowrap
                             ${idx < link.children.length - 1 ? 'border-b border-gray-100' : ''}
