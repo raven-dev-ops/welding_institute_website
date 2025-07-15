@@ -9,7 +9,7 @@ export default function Layout({ children, pageTitle }) {
         {/* Left empty column */}
         <div className="hidden md:block md:col-span-2"></div>
 
-        {/* Center content with site-wide prose */}
+        {/* Center column for main content */}
         <div className="col-span-1 md:col-span-8 px-4 md:px-0 prose prose-neutral max-w-none">
           {children}
         </div>
