@@ -6,11 +6,14 @@ export default function InfoBlock({
   title,
   children,
   className = "",
+  reverse = false,
 }) {
   return (
-    <section className={`flex flex-col md:flex-row items-center gap-6 mb-12 ${className}`}>
-      {/* Image left */}
-      <div className="relative w-full md:w-1/2 flex-shrink-0 min-h-[220px] md:min-h-[340px]">
+    <section
+      className={`flex flex-col md:flex-row items-center gap-6 mb-12 ${reverse ? 'md:flex-row-reverse' : ''} ${className}`}
+    >
+      {/* Image */}
+      <div className="relative md:w-1/2 w-full flex-shrink-0 min-h-[220px] md:min-h-[340px]">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -19,8 +22,8 @@ export default function InfoBlock({
           className="object-contain md:object-cover"
         />
       </div>
-      {/* Text right */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center">
+      {/* Text */}
+      <div className="md:w-1/2 w-full flex flex-col justify-center">
         <h2>{title}</h2>
         <div>
           {children}

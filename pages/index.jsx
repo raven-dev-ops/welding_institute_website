@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Info Blocks and Cards */}
+      {/* Info Blocks (zig-zag alternating) */}
       <div className="max-w-5xl mx-auto px-4">
         {/* Meet Stan Section */}
         <InfoBlock
@@ -85,11 +85,12 @@ export default function Home() {
           </div>
         </InfoBlock>
 
-        {/* Enrollment Info */}
+        {/* Enrollment Info (reversed for zig-zag) */}
         <InfoBlock
           imageSrc="/images/ciwt_photos/3-1920w.jpg"
           imageAlt="Hands-on welding in class"
           title="Master & Hobby Welding Programs"
+          reverse
         >
           <div className="prose prose-neutral max-w-none">
             <p>
@@ -104,7 +105,7 @@ export default function Home() {
           </div>
         </InfoBlock>
 
-        {/* Programs Section */}
+        {/* Programs Section (unchanged) */}
         <div className="grid md:grid-cols-2 gap-8 pb-20">
           {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
