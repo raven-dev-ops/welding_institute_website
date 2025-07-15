@@ -40,29 +40,26 @@ const navLinks = [
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="container mx-auto flex flex-col items-center py-4">
+      <div className="container mx-auto flex flex-col items-center py-6 px-4">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="mb-6">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
-            width={220}
+            width={240}
             height={220}
-            className="mb-4"
+            priority
           />
         </Link>
 
         {/* Nav Links Bar */}
-        <div className="w-full bg-white">
-          <ul className="flex flex-wrap justify-center gap-6 py-2">
+        <div className="w-full">
+          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 py-2">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
 
               return (
-                <li
-                  key={link.name}
-                  className="relative group"
-                >
+                <li key={link.name} className="relative group">
                   <Link
                     href={link.href || "#"}
                     className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200"
