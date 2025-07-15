@@ -61,7 +61,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold mb-2 text-white">
             Welder Training in Kansas City, MO and the Surrounding Areas
           </h1>
-          <p className="text-xl md:text-2xl leading-relaxed">
+          <p className="text-xl md:text-2xl leading-relaxed text-white font-bold">
             Locally Owned Since 2015 | Free Tours | Competitive Class Rate
           </p>
         </div>
