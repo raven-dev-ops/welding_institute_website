@@ -41,7 +41,6 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="flex flex-col items-center w-full">
-        {/* Logo */}
         <Link href="/" className="pt-6 pb-4">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
@@ -52,11 +51,12 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar */}
         <div className="w-full bg-white">
           <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-4 py-6 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
+
+              console.log(link.name, isDropdown); // ✅ Debug!
 
               return (
                 <li key={link.name} className="relative group">
