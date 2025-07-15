@@ -52,7 +52,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar with extra spacing */}
+        {/* Nav Links Bar */}
         <div className="w-full bg-white">
           <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-4 py-6">
             {navLinks.map((link) => {
@@ -65,20 +65,22 @@ export default function Navbar() {
                     className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center"
                   >
                     {link.name}
-                    {isDropdown && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="ml-1 h-4 w-4 transform transition-transform duration-200 group-hover:rotate-180"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    )}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`ml-1 h-4 w-4 transform transition-transform duration-200 ${
+                        isDropdown
+                          ? "group-hover:rotate-0 rotate-180"
+                          : "rotate-180"
+                      }`}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </Link>
 
                   {isDropdown && (
@@ -88,7 +90,9 @@ export default function Navbar() {
                           key={child.name}
                           className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
                         >
-                          <Link href={child.href} className="no-underline">{child.name}</Link>
+                          <Link href={child.href} className="no-underline">
+                            {child.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>
