@@ -51,7 +51,7 @@ export default function Home() {
         }}
       >
         <Image
-          src="/images/ciwt_photos/1-1920w"
+          src="/images/ciwt_photos/1-1920w.jpg"
           alt="Welding workshop"
           fill
           className="object-cover absolute inset-0 z-0"
@@ -71,7 +71,7 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-4">
         {/* Meet Stan Section */}
         <InfoBlock
-          imageSrc="/images/ciwt_photos/img1-025b2313-1920w"
+          imageSrc="/images/ciwt_photos/2-1920w.jpg"
           imageAlt="Stan Crider, Lead Welding Instructor"
           title="Meet Stan Crider"
         >
@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* Enrollment Info */}
         <InfoBlock
-          imageSrc="/images/ciwt_photos/3-1920w"
+          imageSrc="/images/ciwt_photos/3-1920w.jpg"
           imageAlt="Hands-on welding in class"
           title="Master & Hobby Welding Programs"
           reverse
