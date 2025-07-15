@@ -1,89 +1,48 @@
-/* Import Tailwind base styles */
+/* Tailwind base imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* --- Brand Colors as CSS Variables --- */
-:root {
-  --ciwt-dark: #000100;
-  --ciwt-blue: #1329E5;
-  --ciwt-gold: #FEBE0F;
-  --ciwt-green: #68FE03;
-  --ciwt-red: #FA0231;
-  --ciwt-gray: #93A4A8;
-  --ciwt-accent: #5CA701;
-}
-
-/* Universal box-sizing (if not already set) */
+/* Universal box-sizing (recommended reset) */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
+/* Remove default margin/padding */
 html, body {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
-/* Set global font family and smoothing */
+/* Set a readable base font and smoothing (optional, safe) */
 body {
-  background-color: #ffffff;
-  color: var(--ciwt-dark);
-  font-family: "Roboto Condensed", "Roboto Condensed Fallback", Arial, Helvetica, sans-serif;
+  font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-size-adjust: 100%;
-  font-size: 17px;
-  overflow-wrap: break-word;
-}
-
-/* Set global font-weight for headings (NO color, so Tailwind utilities work) */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Condensed", "Roboto Condensed Fallback", Arial, Helvetica, sans-serif;
-  font-weight: 700; /* bold, adjust to 600 for semi-bold if preferred */
-  letter-spacing: 0.01em; /* optional: tightens heading letter spacing */
-  margin-top: 0; /* optional: remove default top margin */
-  margin-bottom: 0.5em; /* consistent bottom spacing */
-}
-
-/* Ensure fixed navbar always stays on top */
-nav {
-  background-color: #ffffff;
-  z-index: 50;
-}
-
-/* Section styling */
-section {
-  background: rgba(255, 255, 255, 0.97);
-  border-radius: 1rem;
-  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.06);
-  padding: 2.5rem 1.5rem;
-  margin: 2rem 0;
-}
-
-/* Cards & highlights */
-.card {
+  -moz-osx-font-smoothing: grayscale;
   background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.07);
-  border-left: 5px solid var(--ciwt-blue);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  color: #000;
 }
 
-/* Accent text */
-.accent {
-  color: var(--ciwt-gold);
-  font-weight: 600;
+/* Prevent images from stretching outside their containers */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Slick slider (if used) */
-.slick-dots li button:before {
-  color: var(--ciwt-blue);
+/* Inherit font for form elements */
+input, button, textarea, select {
+  font: inherit;
 }
-.slick-slide {
+
+/* Remove outline only if you add your own focus styles! */
+:focus {
   outline: none;
+}
+
+/* Remove default list styles (you can style lists as needed) */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

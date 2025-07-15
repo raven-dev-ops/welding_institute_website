@@ -5,34 +5,25 @@ export default function InfoBlock({
   imageAlt,
   title,
   children,
-  whiteText = false, // new prop
+  className = "",
 }) {
-  const headingClass = whiteText
-    ? "text-3xl md:text-4xl font-bold mb-4 text-white"
-    : "text-3xl md:text-4xl font-bold mb-4 text-gray-900";
-  const proseClass = whiteText
-    ? "prose prose-invert text-lg md:text-xl leading-relaxed"
-    : "prose prose-neutral text-lg md:text-xl leading-relaxed";
-
   return (
-    <section className="flex flex-col md:flex-row items-center gap-6 md:gap-10 mb-12 px-4 md:px-12">
+    <section className={`flex flex-col md:flex-row items-center gap-6 mb-12 ${className}`}>
       {/* Image left */}
-      <div className="relative w-full md:w-1/2 flex-shrink-0 min-h-[220px] md:min-h-[340px] rounded-2xl overflow-hidden bg-white shadow">
+      <div className="relative w-full md:w-1/2 flex-shrink-0 min-h-[220px] md:min-h-[340px]">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
           priority
-          className="object-contain md:object-cover p-2 md:p-4"
+          className="object-contain md:object-cover"
         />
       </div>
-      {/* Text right, left-aligned, readable width */}
+      {/* Text right */}
       <div className="w-full md:w-1/2 flex flex-col justify-center">
-        <div className="max-w-2xl text-left mx-auto px-1 md:px-0">
-          <h2 className={headingClass}>{title}</h2>
-          <div className={proseClass}>
-            {children}
-          </div>
+        <h2>{title}</h2>
+        <div>
+          {children}
         </div>
       </div>
     </section>
