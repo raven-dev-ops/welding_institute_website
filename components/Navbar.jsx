@@ -34,14 +34,15 @@ const navLinks = [
       { name: "FAQ", href: "/about/faq" },
     ],
   },
-  { name: "Contact Us", href: "/contact-us/contact" }, // ✅ No children
+  { name: "Contact Us", href: "/contact-us/contact" },
 ];
 
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
-        <Link href="/" className="pt-6 pb-4">
+        {/* Logo */}
+        <Link href="/" className="pt-4 pb-2">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -51,6 +52,7 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Nav Links Bar */}
         <div className="w-full bg-white">
           <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-4 py-6 list-none">
             {navLinks.map((link) => {
