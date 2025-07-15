@@ -39,10 +39,10 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
-      <div className="flex flex-col items-center w-full">
-        {/* Logo: moved down with mt-3 */}
-        <Link href="/" className="block pt-3 pb-1">
+    <nav className="fixed top-0 left-0 w-full z-[100] bg-white shadow-xl">
+      <div className="flex flex-col items-center w-full bg-white">
+        {/* Logo */}
+        <Link href="/" className="block pt-3 pb-1 bg-white z-10">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -52,8 +52,8 @@ export default function Navbar() {
           />
         </Link>
         {/* Navbar Links */}
-        <div className="w-full bg-white shadow">
-          <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-3 list-none">
+        <div className="w-full bg-white shadow z-10">
+          <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-3 list-none bg-white">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
               return (
@@ -92,11 +92,10 @@ export default function Navbar() {
                         opacity-0 pointer-events-none group-hover:pointer-events-auto
                         group-hover:visible invisible
                         transition-all duration-300 ease-out
-                        z-50
+                        z-[110]
                         py-0.5 px-2
                         list-none
                       `}
-                      style={{ backgroundColor: "#fff" }}
                     >
                       {link.children.map((child, idx) => (
                         <li
