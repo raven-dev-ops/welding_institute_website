@@ -86,13 +86,27 @@ export default function Navbar() {
                   )}
 
                   {isDropdown && (
-                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white border border-gray-200 py-4 rounded shadow-xl z-50 list-none">
-                      {link.children.map((child) => (
+                    <ul className={`
+                      absolute left-1/2 transform -translate-x-1/2 mt-2 min-w-[180px] 
+                      bg-white bg-opacity-95 border border-blue-100 shadow-2xl rounded-2xl
+                      group-hover:opacity-100 group-hover:translate-y-0
+                      opacity-0 pointer-events-none group-hover:pointer-events-auto
+                      group-hover:visible invisible
+                      transition-all duration-300 ease-out
+                      z-50
+                      py-2
+                    `}>
+                      {link.children.map((child, idx) => (
                         <li
                           key={child.name}
-                          className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+                          className={`
+                            px-6 py-3 text-base font-medium text-ciwt-dark 
+                            hover:bg-blue-50 hover:text-ciwt-blue
+                            transition-colors duration-150 cursor-pointer whitespace-nowrap
+                            ${idx < link.children.length - 1 ? 'border-b border-gray-100' : ''}
+                          `}
                         >
-                          <Link href={child.href} className="no-underline">
+                          <Link href={child.href} className="no-underline block w-full h-full">
                             {child.name}
                           </Link>
                         </li>
