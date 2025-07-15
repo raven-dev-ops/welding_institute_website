@@ -61,7 +61,7 @@ export default function Navbar() {
               return (
                 <li key={link.name} className="relative group">
                   {isDropdown ? (
-                    <span className="font-semibold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer whitespace-nowrap">
+                    <span className="font-bold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer whitespace-nowrap">
                       {link.name}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="font-semibold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center whitespace-nowrap"
+                      className="font-bold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center whitespace-nowrap"
                     >
                       {link.name}
                     </Link>
@@ -87,8 +87,8 @@ export default function Navbar() {
 
                   {isDropdown && (
                     <ul className={`
-                      absolute left-1/2 transform -translate-x-1/2 mt-2 min-w-[180px] 
-                      bg-white bg-opacity-95 border border-blue-100 shadow-2xl rounded-2xl
+                      absolute left-1/2 transform -translate-x-1/2 mt-2 w-max px-0
+                      bg-white bg-opacity-95 shadow-2xl rounded-2xl
                       group-hover:opacity-100 group-hover:translate-y-0
                       opacity-0 pointer-events-none group-hover:pointer-events-auto
                       group-hover:visible invisible
@@ -101,7 +101,7 @@ export default function Navbar() {
                         <li
                           key={child.name}
                           className={`
-                            px-5 py-2 text-lg font-semibold text-ciwt-dark 
+                            px-5 py-2 text-lg font-bold text-ciwt-dark 
                             hover:bg-blue-50 hover:text-ciwt-blue
                             transition-colors duration-150 cursor-pointer whitespace-nowrap
                             ${idx < link.children.length - 1 ? 'border-b border-gray-100' : ''}
