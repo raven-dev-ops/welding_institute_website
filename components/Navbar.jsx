@@ -65,8 +65,6 @@ export default function Navbar() {
                     className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center"
                   >
                     {link.name}
-
-                    {/* Show chevron only for dropdowns */}
                     {isDropdown && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
