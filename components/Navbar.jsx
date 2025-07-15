@@ -39,9 +39,10 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg drop-shadow-xl">
       <div className="flex flex-col items-center w-full">
-        <Link href="/" className="pt-6 pb-4">
+        {/* Logo flush to top */}
+        <Link href="/" className="">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -51,12 +52,11 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Nav Links */}
         <div className="w-full bg-white">
           <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-4 py-6 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
-
-              console.log(link.name, isDropdown); // ✅ Debug!
 
               return (
                 <li key={link.name} className="relative group">
@@ -65,6 +65,8 @@ export default function Navbar() {
                     className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center"
                   >
                     {link.name}
+
+                    {/* Show chevron only for dropdowns */}
                     {isDropdown && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,7 @@ export default function Navbar() {
                   </Link>
 
                   {isDropdown && (
-                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-4 rounded shadow-lg z-50 list-none">
+                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-4 rounded shadow-xl z-50 list-none">
                       {link.children.map((child) => (
                         <li
                           key={child.name}
