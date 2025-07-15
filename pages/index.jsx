@@ -82,12 +82,11 @@ export default function Home() {
           Stan’s passion is helping students build real-world skills and confidence for a rewarding career.
         </InfoBlock>
 
-        {/* Enrollment Info */}
+        {/* Enrollment Info (now always image left, text right) */}
         <InfoBlock
           imageSrc="/images/ciwt_photos/3-1920w.jpg"
           imageAlt="Hands-on welding in class"
           title="Master & Hobby Welding Programs"
-          reverse
         >
           At Crider&apos;s Institute of Welding Technology, you can become a certified welder in
           as little as 4 months with our 16-week program or gain advanced pipe welding
