@@ -39,10 +39,10 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="container mx-auto flex flex-col items-center py-6 px-4">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+      <div className="flex flex-col items-center w-full">
         {/* Logo */}
-        <Link href="/" className="mb-6">
+        <Link href="/" className="py-4">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -52,9 +52,9 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar */}
-        <div className="w-full">
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 py-2">
+        {/* Nav Links Bar with solid white background */}
+        <div className="w-full bg-white border-t border-gray-200">
+          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 py-3">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
 
