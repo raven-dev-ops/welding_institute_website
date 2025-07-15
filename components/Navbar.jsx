@@ -41,13 +41,13 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
-        {/* Logo */}
-        <Link href="/" className="pt-2 pb-1">
+        {/* Logo: remove extra padding, use block for clean top edge */}
+        <Link href="/" className="block">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
-            width={165}
-            height={120}
+            width={185}
+            height={140}
             priority
           />
         </Link>
@@ -86,14 +86,14 @@ export default function Navbar() {
                   {isDropdown && (
                     <ul
                       className={`
-                        absolute left-1/2 transform -translate-x-1/2 mt-2 w-max px-0
+                        absolute left-1/2 transform -translate-x-1/2 mt-2 w-max
                         bg-white shadow-2xl rounded-2xl
                         group-hover:opacity-100 group-hover:translate-y-0
                         opacity-0 pointer-events-none group-hover:pointer-events-auto
                         group-hover:visible invisible
                         transition-all duration-300 ease-out
                         z-50
-                        py-0.5
+                        py-0.5 px-2
                         list-none
                       `}
                       style={{ backgroundColor: "#fff" }}
@@ -102,7 +102,7 @@ export default function Navbar() {
                         <li
                           key={child.name}
                           className={`
-                            px-4 py-1 text-lg font-bold text-ciwt-dark 
+                            px-2 py-1 text-lg font-bold text-ciwt-dark 
                             hover:bg-blue-50 hover:text-ciwt-blue
                             transition-colors duration-150 cursor-pointer whitespace-nowrap
                             ${idx < link.children.length - 1 ? 'border-b border-gray-100' : ''}
