@@ -52,9 +52,9 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar */}
+        {/* Nav Links Bar — no wrap, tighter spacing */}
         <div className="w-full bg-white">
-          <ul className="flex justify-center flex-nowrap overflow-x-auto gap-x-12 py-3 list-none whitespace-nowrap">
+          <ul className="flex justify-center flex-nowrap overflow-x-auto gap-x-10 py-3 list-none whitespace-nowrap">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
 
