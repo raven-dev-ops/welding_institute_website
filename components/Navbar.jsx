@@ -42,7 +42,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
         {/* Logo: moved down with mt-3 */}
-        <Link href="/" className="block mt-3">
+        <Link href="/" className="block pt-3 pb-1">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -53,7 +53,7 @@ export default function Navbar() {
         </Link>
         {/* Navbar Links */}
         <div className="w-full bg-white shadow">
-          <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-4 list-none">
+          <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-3 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
               return (
