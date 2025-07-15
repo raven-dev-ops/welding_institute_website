@@ -54,7 +54,7 @@ export default function Navbar() {
 
         {/* Nav Links Bar with solid white background */}
         <div className="w-full bg-white border-t border-gray-200">
-          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 py-3">
+          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 py-2">
             {navLinks.map((link) => { // Reduced py-4 to py-3 for tighter spacing
               const isDropdown = link.children && link.children.length > 0;
 

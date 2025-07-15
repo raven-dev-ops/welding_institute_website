@@ -86,7 +86,7 @@ export default function Home() {
       </InfoBlock>
 
       {/* Programs Section */}
-      <div className="max-w-5xl mx-auto px-4 pb-20"> {/* Consider adjusting this div's classes as well if needed for full width */}
+      <div className="max-w-5xl mx-auto px-4 pb-20">
         <div className="grid md:grid-cols-2 gap-8">
  {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
@@ -150,7 +150,7 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-      </div> {/* Consider adjusting this div's classes as well if needed for full width */}
+      </div>
     </Layout>
   );
 }
