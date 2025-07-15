@@ -61,7 +61,7 @@ export default function Navbar() {
               return (
                 <li key={link.name} className="relative group">
                   {isDropdown ? (
-                    <span className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer">
+                    <span className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer whitespace-nowrap">
                       {link.name}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center"
+                      className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center whitespace-nowrap"
                     >
                       {link.name}
                     </Link>
