@@ -112,6 +112,8 @@ export default function Home() {
             <Image
               src="/images/ciwt_photos/3-1920w.jpg"
               alt="Master welding student in workshop"
+              width={600}
+              height={400}
             />
             <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">
               Master Welders Program
@@ -133,6 +135,8 @@ export default function Home() {
             <Image
               src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg"
               alt="Hobby welding class"
+              width={600}
+              height={400}
             />
             <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">
               Hobby Welding Classes
