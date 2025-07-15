@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import Link from "next/link";
 import Layout from "@components/Layout";
-import Image from 'next/image';
+import Image from "next/image";
 import InfoBlock from "@components/InfoBlock";
 
 export default function Home() {
@@ -9,14 +9,17 @@ export default function Home() {
     {
       quote:
         "I took welding classes from Stan Crider several years ago and he was a big part of my apprenticeship at KCPL. He has the best teaching skills; very patient and has a kind heart. Stan Crider is one of the best Journeyman Welders that we have in KC.",
-      author: "Karen E, Journeyman Blacksmith Welder / Respiratory Therapist (8/17/2023)",
+      author:
+        "Karen E, Journeyman Blacksmith Welder / Respiratory Therapist (8/17/2023)",
     },
     {
-      quote: "Hobby training was educational and informative. The staff was outstanding, thank you!",
+      quote:
+        "Hobby training was educational and informative. The staff was outstanding, thank you!",
       author: "Andres M (6/18/2023)",
     },
     {
-      quote: "The instructors were really helpful. All the training and learning got me a union job right off the bat after graduation! Highly recommend.",
+      quote:
+        "The instructors were really helpful. All the training and learning got me a union job right off the bat after graduation! Highly recommend.",
       author: "Jacob M (3/27/2023)",
     },
     // Add more reviews if desired...
@@ -38,66 +41,79 @@ export default function Home() {
   return (
     <Layout pageTitle="Crider’s Institute of Welding Technology">
       {/* Hero Banner */}
-      <section className="flex flex-col items-center justify-center min-h-[320px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden" style={{ backgroundSize: 'cover', backgroundPosition: 'center', background: 'linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%)' }}>
+      <section
+        className="flex flex-col items-center justify-center min-h-[320px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden"
+        style={{
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          background:
+            "linear-gradient(120deg, var(--ciwt-blue) 80%, var(--ciwt-gold) 100%)",
+        }}
+      >
         <Image
- src="/images/stock_photos/RSshutterstock_107051852-1920w.jpg"
- alt="Welding workshop"
- fill
- className="object-cover absolute inset-0 z-0"
- />
+          src="/images/ciwt_photos/1-1920w"
+          alt="Welding workshop"
+          fill
+          className="object-cover absolute inset-0 z-0"
+        />
 
-        <div className="bg-black bg-opacity-60 rounded-2xl px-8 py-12 text-center z-10 relative">
-          <h1 className="text-5xl md:text-6xl font-bold mb-2 text-white">Welcome to Crider Institute of Welding Technology</h1>
+        <div className="bg-black bg-opacity-60 rounded-2xl px-4 md:px-24 py-12 text-center z-10 relative max-w-3xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 text-white">
+            Welder Training in Kansas City, MO and the Surrounding Areas
+          </h1>
           <p className="text-xl md:text-2xl leading-relaxed">
-            Launching successful welding careers since 1990
+            Locally Owned Since 2015 | Free Tours | Competitive Class Rate
           </p>
         </div>
       </section>
 
-      {/* Meet Stan Section */}
-      <InfoBlock
-        imageSrc="/images/ciwt_photos/1-1920w.jpg"
-        imageAlt="Stan Crider, Lead Welding Instructor"
-        title="Meet Stan Crider"
-      >
-        Stan Crider, Owner and Lead Instructor at Crider’s Institute of Welding Technology,
-        brings over 45 years of experience in nearly every aspect of the welding industry and
-        more than 25 years teaching in private schools and public colleges. He’s an AWS Certified
-        Welding Inspector & Educator whose career includes work in aircraft, power plants, and more.
-        Stan’s passion is helping students build real-world skills and confidence for a rewarding career.
-      </InfoBlock>
+      {/* Info Blocks and Cards in leveled container */}
+      <div className="max-w-5xl mx-auto px-4">
+        {/* Meet Stan Section */}
+        <InfoBlock
+          imageSrc="/images/ciwt_photos/img1-025b2313-1920w"
+          imageAlt="Stan Crider, Lead Welding Instructor"
+          title="Meet Stan Crider"
+        >
+          Stan Crider, Owner and Lead Instructor at Crider’s Institute of Welding Technology,
+          brings over 45 years of experience in nearly every aspect of the welding industry and
+          more than 25 years teaching in private schools and public colleges. He’s an AWS Certified
+          Welding Inspector & Educator whose career includes work in aircraft, power plants, and more.
+          Stan’s passion is helping students build real-world skills and confidence for a rewarding career.
+        </InfoBlock>
 
-      {/* Enrollment Info */}
-      <InfoBlock
-        imageSrc="/images/stock_photos/RSshutterstock_116281810-1920w.jpg"
-        imageAlt="Hands-on welding in class"
-        title="Master & Hobby Welding Programs"
-        reverse
-      >
-        At Crider&apos;s Institute of Welding Technology, you can become a certified welder in
-        as little as 4 months with our 16-week program or gain advanced pipe welding
-        certification with our 24-week option. Flexible schedules and tuition assistance available!<br /><br />
-        Our training is 80% hands-on. Our 12:1 student-to-instructor
-        ratio ensures personalized training with our experienced team. This is what makes CIWT
-        the top choice for welding training in Kansas City and beyond.<br /><br />
-        Whether you’re a recent high school grad, military veteran, or changing careers,
-        our welding program opens doors to opportunities in automotive, shipbuilding,
-        aircraft, and more.
-      </InfoBlock>
+        {/* Enrollment Info */}
+        <InfoBlock
+          imageSrc="/images/ciwt_photos/3-1920w"
+          imageAlt="Hands-on welding in class"
+          title="Master & Hobby Welding Programs"
+          reverse
+        >
+          At Crider&apos;s Institute of Welding Technology, you can become a certified welder in
+          as little as 4 months with our 16-week program or gain advanced pipe welding
+          certification with our 24-week option. Flexible schedules and tuition assistance available!<br /><br />
+          Our training is 80% hands-on. Our 12:1 student-to-instructor
+          ratio ensures personalized training with our experienced team. This is what makes CIWT
+          the top choice for welding training in Kansas City and beyond.<br /><br />
+          Whether you’re a recent high school grad, military veteran, or changing careers,
+          our welding program opens doors to opportunities in automotive, shipbuilding,
+          aircraft, and more.
+        </InfoBlock>
 
-      {/* Programs Section */}
-      <div className="max-w-5xl mx-auto px-4 pb-20">
-        <div className="grid md:grid-cols-2 gap-8">
- {/* Card 1 */}
+        {/* Programs Section */}
+        <div className="grid md:grid-cols-2 gap-8 pb-20">
+          {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
             <Image
               src="/images/ciwt_photos/3-1920w.jpg"
               alt="Master welding student in workshop"
               className="w-full h-48 object-cover rounded-xl mb-4"
-              width={600} // Adjust width and height as needed
-              height={400} // Adjust width and height as needed
+              width={600}
+              height={400}
             />
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">Master Welders Program</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">
+              Master Welders Program
+            </h3>
             <p className="text-gray-800 mb-4 text-center text-lg leading-relaxed">
               Become a master certified welder in as little as 16 weeks.
               Get the guidance you need to advance your skills and start your career.
@@ -116,10 +132,12 @@ export default function Home() {
               src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg"
               alt="Hobby welding class"
               className="w-full h-48 object-cover rounded-xl mb-4"
-              width={600} // Adjust width and height as needed
-              height={400} // Adjust width and height as needed
+              width={600}
+              height={400}
             />
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">Hobby Welding Classes</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">
+              Hobby Welding Classes
+            </h3>
             <p className="text-gray-800 mb-4 text-center text-lg leading-relaxed">
               Learn welding for fun or small projects. Perfect for hobbyists — no experience needed!
             </p>
@@ -131,25 +149,25 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </div>
 
-        {/* Reviews Carousel */}
-        <div className="max-w-4xl mx-auto mt-20 px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center text-white">What Our Students Say</h2>
-          <Slider {...sliderSettings}>
-            {reviews.map((review, idx) => (
-              <div key={idx} className="px-4">
-                <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white flex flex-col justify-between h-full">
-                  <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow leading-relaxed">
- &quot;{review.quote}&quot;
-                  </p>
-                  <p className="text-sm font-semibold text-gray-600 text-right mt-auto mt-auto">
-                    — {review.author}
-                  </p>
-                </div>
+      {/* Reviews Carousel */}
+      <div className="max-w-4xl mx-auto mt-20 px-4">
+        <h2 className="text-3xl font-bold mb-6 text-center text-white">What Our Students Say</h2>
+        <Slider {...sliderSettings}>
+          {reviews.map((review, idx) => (
+            <div key={idx} className="px-4">
+              <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white flex flex-col justify-between h-full">
+                <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow">
+                  &quot;{review.quote}&quot;
+                </p>
+                <p className="text-sm font-semibold text-gray-600 text-right mt-auto">
+                  — {review.author}
+                </p>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </Layout>
   );
