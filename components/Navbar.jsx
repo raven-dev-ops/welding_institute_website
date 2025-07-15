@@ -39,10 +39,9 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg drop-shadow-xl">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
-        {/* Logo flush to top */}
-        <Link href="/" className="">
+        <Link href="/" className="pt-6 pb-4">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
@@ -52,7 +51,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links */}
         <div className="w-full bg-white">
           <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-4 py-6 list-none">
             {navLinks.map((link) => {
@@ -60,12 +58,12 @@ export default function Navbar() {
 
               return (
                 <li key={link.name} className="relative group">
-                  <Link
-                    href={link.href || "#"}
-                    className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center"
-                  >
-                    {link.name}
-                    {isDropdown && (
+                  {isDropdown ? (
+                    <button
+                      type="button"
+                      className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline"
+                    >
+                      {link.name}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="ml-1 h-4 w-4 transform transition-transform duration-200 rotate-180 group-hover:rotate-0"
@@ -78,8 +76,15 @@ export default function Navbar() {
                           clipRule="evenodd"
                         />
                       </svg>
-                    )}
-                  </Link>
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
 
                   {isDropdown && (
                     <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-4 rounded shadow-xl z-50 list-none">
