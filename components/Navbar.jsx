@@ -34,7 +34,7 @@ const navLinks = [
       { name: "FAQ", href: "/about/faq" },
     ],
   },
-  { name: "Contact Us", href: "/contact-us/contact" },
+  { name: "Contact Us", href: "/contact-us/contact" }, // ✅ No children
 ];
 
 export default function Navbar() {
