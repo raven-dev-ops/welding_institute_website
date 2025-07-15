@@ -75,6 +75,7 @@ export default function Home() {
           imageAlt="Stan Crider, Lead Welding Instructor"
           title="Meet Stan Crider"
         >
+
           Stan Crider, Owner and Lead Instructor at Crider’s Institute of Welding Technology,
           brings over 45 years of experience in nearly every aspect of the welding industry and
           more than 25 years teaching in private schools and public colleges. He’s an AWS Certified
@@ -88,6 +89,7 @@ export default function Home() {
           imageAlt="Hands-on welding in class"
           title="Master & Hobby Welding Programs"
         >
+
           At Crider&apos;s Institute of Welding Technology, you can become a certified welder in
           as little as 4 months with our 16-week program or gain advanced pipe welding
           certification with our 24-week option. Flexible schedules and tuition assistance available!<br /><br />
@@ -106,7 +108,7 @@ export default function Home() {
             <Image
               src="/images/ciwt_photos/3-1920w.jpg"
               alt="Master welding student in workshop"
-              className="w-full h-48 object-cover rounded-xl mb-4"
+              className="object-cover absolute inset-0 z-0"
               width={600}
               height={400}
             />
@@ -130,7 +132,7 @@ export default function Home() {
             <Image
               src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg"
               alt="Hobby welding class"
-              className="w-full h-48 object-cover rounded-xl mb-4"
+              className="object-cover absolute inset-0 z-0"
               width={600}
               height={400}
             />
