@@ -3,7 +3,6 @@ import Navbar from "@components/Navbar";
 export default function Header({ pageTitle }) {
   return (
     <>
-      {/* ✅ FIXED Navbar sits at the absolute top */}
       <Navbar />
 
       {/* ✅ Top Info Bar below, will slide under the navbar */}
