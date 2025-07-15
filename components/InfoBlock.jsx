@@ -7,20 +7,20 @@ export default function InfoBlock({
   children,
 }) {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-12">
-      {/* Image always on the left */}
-      <div className="relative w-full md:w-1/2 flex-shrink-0 min-h-[320px] md:min-h-[400px] rounded-2xl overflow-hidden bg-white">
+    <section className="flex flex-col md:flex-row items-center gap-6 md:gap-10 mb-12 px-4 md:px-12">
+      {/* Image left */}
+      <div className="relative w-full md:w-1/2 flex-shrink-0 min-h-[220px] md:min-h-[340px] rounded-2xl overflow-hidden bg-white shadow">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
           priority
-          className="object-contain p-4"
+          className="object-contain md:object-cover p-2 md:p-4"
         />
       </div>
-      {/* Text always on right, aligned left, wrapped at max-w-2xl */}
-      <div className="w-full md:w-1/2 px-4 md:px-8 flex flex-col justify-center">
-        <div className="max-w-2xl mx-auto text-left">
+      {/* Text right, limited width, left-aligned */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center">
+        <div className="max-w-2xl text-left mx-auto px-1 md:px-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             {title}
           </h2>
