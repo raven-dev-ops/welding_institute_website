@@ -61,7 +61,7 @@ export default function Navbar() {
               return (
                 <li key={link.name} className="relative group">
                   {isDropdown ? (
-                    <span className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer whitespace-nowrap">
+                    <span className="font-semibold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer whitespace-nowrap">
                       {link.name}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="font-medium text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center whitespace-nowrap"
+                      className="font-semibold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center whitespace-nowrap"
                     >
                       {link.name}
                     </Link>
@@ -94,16 +94,18 @@ export default function Navbar() {
                       group-hover:visible invisible
                       transition-all duration-300 ease-out
                       z-50
-                      py-2
+                      py-1
+                      list-none
                     `}>
                       {link.children.map((child, idx) => (
                         <li
                           key={child.name}
                           className={`
-                            px-6 py-3 text-base font-medium text-ciwt-dark 
+                            px-5 py-2 text-lg font-semibold text-ciwt-dark 
                             hover:bg-blue-50 hover:text-ciwt-blue
                             transition-colors duration-150 cursor-pointer whitespace-nowrap
                             ${idx < link.children.length - 1 ? 'border-b border-gray-100' : ''}
+                            list-none
                           `}
                         >
                           <Link href={child.href} className="no-underline block w-full h-full">
