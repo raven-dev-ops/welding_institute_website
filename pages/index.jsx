@@ -22,7 +22,6 @@ export default function Home() {
         "The instructors were really helpful. All the training and learning got me a union job right off the bat after graduation! Highly recommend.",
       author: "Jacob M (3/27/2023)",
     },
-    // Add more reviews if desired...
   ];
 
   const sliderSettings = {
@@ -40,6 +39,11 @@ export default function Home() {
 
   return (
     <Layout pageTitle="Crider’s Institute of Welding Technology">
+      {/* 🚩 TEST: REMOVE THIS ONCE YOU SEE RED */}
+      <div className="bg-red-600 text-white text-3xl font-bold text-center py-8 mb-8">
+        IF YOU SEE THIS RED BANNER, TAILWIND CSS IS WORKING!
+      </div>
+
       {/* Hero Banner */}
       <section
         className="flex flex-col items-center justify-center min-h-[600px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden"
