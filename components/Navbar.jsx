@@ -39,9 +39,9 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
-        {/* Logo with tight spacing */}
+        {/* Logo with tighter spacing */}
         <Link href="/" className="pt-2 pb-1">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
@@ -52,9 +52,9 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Nav Links Bar — no wrap, tighter spacing */}
-        <div className="w-full bg-white">
-          <ul className="flex justify-center flex-nowrap overflow-x-auto gap-x-10 py-3 list-none whitespace-nowrap">
+        {/* Nav Links Bar with tighter vertical gap */}
+        <div className="w-full bg-white shadow">
+          <ul className="flex flex-wrap justify-center gap-x-[80px] gap-y-2 py-4 list-none">
             {navLinks.map((link) => {
               const isDropdown = link.children && link.children.length > 0;
 
@@ -86,7 +86,7 @@ export default function Navbar() {
                   )}
 
                   {isDropdown && (
-                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-3 rounded shadow-xl z-50 list-none">
+                    <ul className="absolute left-1/2 transform -translate-x-1/2 mt-2 hidden group-hover:block bg-white py-4 rounded shadow-xl z-50 list-none">
                       {link.children.map((child) => (
                         <li
                           key={child.name}
