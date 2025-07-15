@@ -82,7 +82,7 @@ export default function Home() {
           Stan’s passion is helping students build real-world skills and confidence for a rewarding career.
         </InfoBlock>
 
-        {/* Enrollment Info (now always image left, text right) */}
+        {/* Enrollment Info */}
         <InfoBlock
           imageSrc="/images/ciwt_photos/3-1920w.jpg"
           imageAlt="Hands-on welding in class"
@@ -152,7 +152,9 @@ export default function Home() {
 
       {/* Reviews Carousel */}
       <div className="max-w-4xl mx-auto mt-20 px-4">
-        <h2 className="text-3xl font-bold mb-6 text-center text-white">What Our Students Say</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center text-white">
+          What Our Students Say
+        </h2>
         <Slider {...sliderSettings}>
           {reviews.map((review, idx) => (
             <div key={idx} className="px-4">
