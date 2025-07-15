@@ -22,16 +22,17 @@ export default function InfoBlock({
         reverse ? "md:flex-row-reverse" : ""
       }`}
     >
-      {/* ✅ Relative for fill image */}
-      <div className="relative w-full md:w-1/2 flex-shrink-0 h-64 md:h-80">
+      {/* ✅ Make sure parent has relative + height for fill */}
+      <div className="relative w-full md:w-1/2 flex-shrink-0 min-h-[320px] md:min-h-[400px] rounded-2xl overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
-          priority
-          className="object-cover rounded-2xl shadow-xl border-4 border-white"
+          priority // ✅ Preload if this block is above the fold
+          className="object-cover"
         />
       </div>
+
       <div className="w-full md:w-1/2 px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
           {title}
