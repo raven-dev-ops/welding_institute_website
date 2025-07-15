@@ -41,8 +41,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-xl">
       <div className="flex flex-col items-center w-full">
-        {/* Logo: remove extra padding, use block for clean top edge */}
-        <Link href="/" className="block">
+        {/* Logo: moved down with mt-3 */}
+        <Link href="/" className="block mt-3">
           <Image
             src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
             alt="CIWT Logo"
