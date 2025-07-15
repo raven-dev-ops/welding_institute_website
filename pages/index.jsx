@@ -42,7 +42,7 @@ export default function Home() {
     <Layout pageTitle="Crider’s Institute of Welding Technology">
       {/* Hero Banner */}
       <section
-        className="flex flex-col items-center justify-center min-h-[320px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden"
+        className="flex flex-col items-center justify-center min-h-[600px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
