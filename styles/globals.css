@@ -1,9 +1,15 @@
-/* Tailwind base imports */
+/* TAILWIND DIRECTIVES: These MUST come first */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Universal box-sizing (recommended reset) */
+/* --- DIAGNOSTIC: YELLOW BG --- */
+/* You should see a yellow background if CSS is loading! */
+body {
+  background: yellow !important;
+}
+
+/* --- GLOBAL RESETS --- */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -14,12 +20,12 @@ html, body {
   padding: 0;
 }
 
-/* Set a readable base font and smoothing (optional, safe) */
+/* --- FONT & COLOR --- */
 body {
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
+  /* background: #fff;     REMOVE OR COMMENT THIS FOR NOW */
   color: #000;
 }
 
