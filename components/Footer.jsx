@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* VISIT US */}
         <div>
-          <h3 className="text-gray-900 text-xl font-bold mb-2">VISIT US</h3>
+          <h3 className="text-gray-900 text-xl font-bold mb-2">VISIT US</h3> {/* This heading was already updated in the previous attempt, so the diff might not show changes here if the color was already text-white and font-bold. */}
           <p className="text-base">Crider&apos;s Institute of Welding Technology</p>
           <p className="text-base">300 NW Jefferson</p>
           <p className="text-base">Grain Valley, MO 64029</p>

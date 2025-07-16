@@ -6,7 +6,7 @@ export default function Reviews() {
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
         <h1 className="text-3xl font-bold mb-4"></h1>
         <p className="text-lg text-gray-700 mb-8">
-          Here’s what our students say about training at Crider’s Institute of Welding Technology!
+          Here&apos;s what our students say about training at Crider&apos;s Institute of Welding Technology!
         </p>
         
         {/* ✅ Google Reviews Widget Embed */}

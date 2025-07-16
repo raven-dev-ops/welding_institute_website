@@ -17,7 +17,7 @@ export default function RequestTour() {
         >
           {/* Netlify form hidden input */}
           <input type="hidden" name="form-name" value="tour-request" />
-          <p className="hidden">
+          <p className="hidden" >
             <label>Don’t fill this out: <input name="bot-field" /></label>
           </p>
 

@@ -37,7 +37,7 @@ const navLinks = [
   { name: "Contact", href: "/contact-us/contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({}) {
   return (
     <nav className="fixed top-0 left-0 w-full z-[100] bg-white shadow-xl">
       <div className="flex flex-col items-center w-full bg-white">

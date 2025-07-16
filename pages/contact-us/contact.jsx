@@ -9,7 +9,7 @@ export default function Contact() {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-2">Meet Stan Crider - Owner</h2>
           <p className="text-gray-700 mb-2">
-            With over 45 years of experience in the welding industry, Stan brings unmatched expertise to every student. 
+            With over 45 years of experience in the welding industry, Stan brings unmatched expertise to every student.
             He’s an AWS Certified Welding Inspector & Educator and has taught in private schools and public colleges for more than 25 years.
           </p>
           <p className="text-gray-700">
@@ -26,7 +26,7 @@ export default function Contact() {
             Phone: (816) 992-4046 &nbsp;|&nbsp; Email: ciwt.mo@gmail.com
           </p>
           <p className="text-gray-700">
-            Community supporter & proud member of the American Welding Society.
+            Community supporter &amp; proud member of the American Welding Society.
           </p>
         </section>
 

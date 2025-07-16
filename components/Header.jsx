@@ -10,7 +10,7 @@ export default function Header({ pageTitle }) {
         <div className="container mx-auto px-4 py-4 text-center">
           <h1 className="text-2xl font-bold text-gray-900">
             {pageTitle || "Crider's Institute of Welding Technology"}
-          </h1>
+</h1>
           <p className="text-sm text-gray-600">
             Locally Owned Since 2015 | Free Tours | Competitive Class Rate
           </p>

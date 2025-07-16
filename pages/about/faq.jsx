@@ -9,8 +9,7 @@ const faqs = [
   },
   {
     question: "Does CIWT offer different types of welding classes?",
-    answer:
-      "Yes! CIWT offers a hobby class, a master pipe welding program, and a structural and alloy welding program. See our website for more details.",
+    answer: "Yes! CIWT offers a hobby class, a master pipe welding program, and a structural and alloy welding program. See our website for more details.",
   },
   {
     question: "How much do these classes cost?",
@@ -19,18 +18,15 @@ const faqs = [
   },
   {
     question: "What does the master welding program include?",
-    answer:
-      "The cost includes tuition, books, supplies, tools, and two AWS welding certifications. Our welder training is sure to get you career-ready.",
+    answer: "The cost includes tuition, books, supplies, tools, and two AWS welding certifications. Our welder training is sure to get you career-ready.",
   },
   {
     question: "How do I pay for the master welding program? Do you offer financial aid?",
-    answer:
-      "We accept VA benefits and Vocational Rehabilitation through the state. We also have an in-house payment plan. However, we cannot accept federal financial aid such as Pell Grants.",
+    answer: "We accept VA benefits and Vocational Rehabilitation through the state. We also have an in-house payment plan. However, we cannot accept federal financial aid such as Pell Grants.",
   },
   {
     question: "Are there any requirements to enroll in the master welding program?",
-    answer:
-      "Yes. You must have a high school diploma or GED equivalent and a solid understanding of basic math. Once you've met those prerequisites, we’ll be happy to welcome you.",
+    answer: "Yes. You must have a high school diploma or GED equivalent and a solid understanding of basic math. Once you&apos;ve met those prerequisites, we&apos;ll be happy to welcome you.",
   },
   {
     question: "How many of your students get jobs after they graduate?",

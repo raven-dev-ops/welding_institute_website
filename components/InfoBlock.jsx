@@ -24,7 +24,7 @@ export default function InfoBlock({
       </div>
       {/* Text */}
       <div className="md:w-1/2 w-full flex flex-col justify-center">
-        <h2>{title}</h2>
+        <h2>{title.replace(/'/g, '&apos;')}</h2>
         <div>
           {children}
         </div>

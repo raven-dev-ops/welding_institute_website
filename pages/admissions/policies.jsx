@@ -89,7 +89,7 @@ export default function Policies() {
           {/* Grievance Procedure */}
           <section>
             <h2 className="text-2xl font-semibold mb-2">Grievance Procedure</h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 mb-2">
               Students can submit grievances in writing to their instructor. Unresolved issues may be appealed to the owner
               or to the Missouri Department of Higher Education.
             </p>

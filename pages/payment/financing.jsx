@@ -7,11 +7,11 @@ export default function Financing() {
         <h1 className="text-3xl font-bold mb-4">Convenient Payment Options for Your Welding Courses</h1>
 
         <p className="text-lg text-gray-700 mb-6">
-          Cost shouldn’t keep you from training for a lucrative career. That’s why Crider’s Institute of Welding Technology provides you with various payment options to help you afford our welding programs. Call us today for more information on our available payment options and take the first step toward your new career.
+          Cost shouldn&apos;t keep you from training for a lucrative career. That&apos;s why Crider&apos;s Institute of Welding Technology provides you with various payment options to help you afford our welding programs. Call us today for more information on our available payment options and take the first step toward your new career.
         </p>
 
         <h2 className="text-2xl font-semibold mb-4">Our Payment Options Include:</h2>
-
+ 
         <ul className="list-disc list-inside text-gray-700 mb-8">
           <li className="mb-3">
             <strong>SkillUp</strong> – This is offered throughout the state of Missouri and is focused on helping students on government assistance programs complete their job training.
@@ -28,7 +28,7 @@ export default function Financing() {
         </ul>
 
         <p className="text-lg text-gray-700 mb-8">
-          <strong>Free Tours:</strong> Call us today for more information<br />
+          <strong>Free Tours:</strong> Call us today for more information<br /> {/* no apostrophe to escape */}
           <span className="block mt-2 font-semibold">(816) 992-4046</span>
         </p>
 
@@ -36,7 +36,7 @@ export default function Financing() {
           <p className="mb-2">
             “I had an awesome experience with their Master Welding Program. Stan Crider is a great teacher and a good friend. I highly recommend CIWT to anyone who wants to weld. 500 hours of hands-on training (lots of one-on-one) and tests for three welding certifications!”
           </p>
-          <p className="font-semibold">- Nicholas Bishop | Google Review</p>
+          <p className="font-semibold">- Nicholas Bishop | Google Review</p> {/* no apostrophe to escape */}
         </div>
       </div>
     </Layout>
