@@ -1,5 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -25,7 +27,7 @@ const navLinks = [
       { name: "Online Deposits", href: "/payment/deposits" },
     ],
   },
-  { name: "Request Tour", href: "/request-tour/tour-form" },
+  { name: "Request a Tour", href: "/request-tour/tour-form" },
   { name: "Reviews", href: "/reviews/reviews" },
   {
     name: "About",
@@ -37,35 +39,89 @@ const navLinks = [
   { name: "Contact", href: "/contact-us/contact" },
 ];
 
-export default function Navbar({}) {
+export default function Navbar() {
+  const router = useRouter();
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  // Only show dropdowns on hover for desktop, click for mobile
+  const handleDropdown = (idx) => {
+    setOpenDropdown(openDropdown === idx ? null : idx);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-[100] bg-white shadow-xl">
-      <div className="flex flex-col items-center w-full bg-white">
-        {/* Logo */}
-        <Link href="/" className="block pt-3 pb-1 bg-white z-10">
-          <Image
-            src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
-            alt="CIWT Logo"
-            width={185}
-            height={140}
-            priority
-          />
-        </Link>
-        {/* Navbar Links */}
-        <div className="w-full bg-white shadow z-10">
-          <ul className="flex flex-wrap justify-center gap-x-[56px] gap-y-2 py-3 list-none bg-white">
-            {navLinks.map((link) => {
-              const isDropdown = link.children && link.children.length > 0;
-              return (
-                <li key={link.name} className="relative group">
-                  {isDropdown ? (
-                    <span className="font-bold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 flex items-center no-underline cursor-pointer whitespace-nowrap">
+    <header className="w-full shadow">
+      {/* Top bar */}
+      <div className="bg-white flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-2 border-b">
+        <div className="flex items-center gap-3 text-sm">
+          <span className="font-bold text-yellow-500 text-lg">4.1</span>
+          <span className="text-yellow-500 text-lg">★★★★★</span>
+          <Link href="/reviews" className="text-blue-700 underline ml-2">
+            (85 Ratings & Reviews)
+          </Link>
+          <span className="hidden md:inline text-gray-700 ml-4">
+            Serving Kansas City, MO and Kansas City, KS
+          </span>
+        </div>
+        <div className="my-2 md:my-0">
+          <Link href="/">
+            <Image
+              src="/images/ciwt_logo/logo-b9339ab0-1920w.png"
+              alt="CIWT Logo"
+              width={110}
+              height={80}
+              className="mx-auto"
+              priority
+            />
+          </Link>
+        </div>
+        <div className="flex items-center gap-4 mt-2 md:mt-0">
+          <Link href="/request-tour/tour-form">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-semibold shadow text-sm">
+              Request a Tour
+            </button>
+          </Link>
+          <span className="flex items-center text-red-600 font-bold">
+            <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 5h2l3.6 7.59-1.35 2.44A2 2 0 009 18h9a2 2 0 002-2v-7a2 2 0 00-2-2h-8l-2-4H3" />
+            </svg>
+            (816) 992-4046
+          </span>
+        </div>
+      </div>
+      {/* Main Nav */}
+      <nav className="bg-white font-bold uppercase text-[15px] shadow-sm">
+        <ul className="flex flex-wrap justify-center gap-6 py-3">
+          {navLinks.map((link, idx) => {
+            const isActive =
+              router.pathname === link.href ||
+              (link.href !== "/" && router.pathname.startsWith(link.href));
+            const hasDropdown = link.children && link.children.length > 0;
+
+            return (
+              <li
+                key={link.name}
+                className="relative group"
+                // Desktop: show dropdown on hover, Mobile: show on click
+                onMouseEnter={() => window.innerWidth > 768 && hasDropdown && setOpenDropdown(idx)}
+                onMouseLeave={() => window.innerWidth > 768 && hasDropdown && setOpenDropdown(null)}
+              >
+                {hasDropdown ? (
+                  <>
+                    <button
+                      className={
+                        "flex items-center gap-1 " +
+                        (isActive
+                          ? "text-blue-700 border-b-2 border-blue-700 pb-1"
+                          : "text-black hover:text-blue-700")
+                      }
+                      onClick={() => handleDropdown(idx)}
+                      type="button"
+                    >
                       {link.name}
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="ml-1 h-4 w-4 transform transition-transform duration-200 rotate-180 group-hover:rotate-0"
-                        viewBox="0 0 20 20"
+                        className={`w-4 h-4 ml-1 transition-transform ${openDropdown === idx ? "rotate-180" : ""}`}
                         fill="currentColor"
+                        viewBox="0 0 20 20"
                       >
                         <path
                           fillRule="evenodd"
@@ -73,54 +129,44 @@ export default function Navbar({}) {
                           clipRule="evenodd"
                         />
                       </svg>
-                    </span>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="font-bold text-lg text-ciwt-dark hover:text-ciwt-blue transition-colors duration-200 no-underline flex items-center whitespace-nowrap"
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-
-                  {isDropdown && (
+                    </button>
+                    {/* Dropdown menu */}
                     <ul
                       className={`
-                        absolute left-1/2 transform -translate-x-1/2 mt-2 w-max
-                        bg-white shadow-2xl rounded-2xl
-                        group-hover:opacity-100 group-hover:translate-y-0
-                        opacity-0 pointer-events-none group-hover:pointer-events-auto
-                        group-hover:visible invisible
-                        transition-all duration-300 ease-out
-                        z-[110]
-                        py-0.5 px-2
-                        list-none
+                        absolute left-1/2 transform -translate-x-1/2 mt-2 w-max bg-white shadow-2xl rounded-2xl
+                        z-30 py-1 px-2 list-none
+                        transition-all duration-200
+                        ${openDropdown === idx ? "opacity-100 visible pointer-events-auto translate-y-0" : "opacity-0 invisible pointer-events-none -translate-y-2"}
+                        group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0
                       `}
                     >
-                      {link.children.map((child, idx) => (
+                      {link.children.map((child) => (
                         <li
                           key={child.name}
-                          className={`
-                            px-2 py-1 text-lg font-bold text-ciwt-dark 
-                            hover:bg-blue-50 hover:text-ciwt-blue
-                            transition-colors duration-150 cursor-pointer whitespace-nowrap
-                            ${idx < link.children.length - 1 ? 'border-b border-gray-100' : ''}
-                            list-none
-                          `}
+                          className="px-2 py-1 text-lg font-bold text-ciwt-dark hover:bg-blue-50 hover:text-ciwt-blue rounded-md transition-colors duration-150 whitespace-nowrap"
                         >
-                          <Link href={child.href} className="no-underline block w-full h-full">
-                            {child.name}
-                          </Link>
+                          <Link href={child.href}>{child.name}</Link>
                         </li>
                       ))}
                     </ul>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-    </nav>
+                  </>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={
+                      isActive
+                        ? "text-blue-700 border-b-2 border-blue-700 pb-1"
+                        : "text-black hover:text-blue-700"
+                    }
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </header>
   );
 }

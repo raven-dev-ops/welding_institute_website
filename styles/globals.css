@@ -3,12 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- DIAGNOSTIC: YELLOW BG --- */
-/* You should see a yellow background if CSS is loading! */
-body {
-  background: yellow !important;
-}
-
 /* --- GLOBAL RESETS --- */
 *, *::before, *::after {
   box-sizing: border-box;
