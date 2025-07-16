@@ -88,7 +88,7 @@ export default function Home() {
         >
           <div className="prose prose-neutral max-w-none">
             <p> {/* No apostrophe here */}
-              At Crider's Institute of Welding Technology, you can become a certified welder in as little as 4 months with our 16-week program or gain advanced pipe welding certification with our 24-week option. Flexible schedules and tuition assistance available!
+              At Crider&apos;s Institute of Welding Technology, you can become a certified welder in as little as 4 months with our 16-week program or gain advanced pipe welding certification with our 24-week option. Flexible schedules and tuition assistance available!
             </p>
             <p>
               Our training is 80% hands-on. Our 12:1 student-to-instructor ratio ensures personalized training with our experienced team. This is what makes CIWT the top choice for welding training in Kansas City and beyond.
