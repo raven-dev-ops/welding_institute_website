@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 
-// Example reviews
 const reviews = [
   {
     quote:
@@ -14,10 +13,11 @@ const reviews = [
   },
   {
     quote: "Hobby training was educational and informative. The staff was outstanding, thank you!",
-    author: "Andres M (6/18/2023)", // No apostrophe here
+    author: "Andres M (6/18/2023)",
   },
   {
-    quote: "The instructors were really helpful. All the training and learning got me a union job right off the bat after graduation! Highly recommend.",
+    quote:
+      "The instructors were really helpful. All the training and learning got me a union job right off the bat after graduation! Highly recommend.",
     author: "Jacob M (3/27/2023)",
   },
 ];
@@ -38,7 +38,7 @@ const sliderSettings = {
 export default function Home() {
   return (
     <Layout pageTitle="Crider’s Institute of Welding Technology">
-      {/* Hero Banner */} {/* No apostrophe here */}
+      {/* Hero Banner */}
       <section
         className="flex flex-col items-center justify-center min-h-[450px] text-white rounded-2xl mb-12 shadow-xl relative overflow-hidden"
         style={{
@@ -63,14 +63,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Info Blocks Zig-Zag */}
+      {/* Info Blocks (Zig-Zag) */}
       <div className="max-w-5xl mx-auto px-4">
         <InfoBlock
-          imageSrc="/images/ciwt_photos/2-1920w.jpg" // No apostrophe here
-          imageAlt="Stan Crider, Lead Welding Instructor" // No apostrophe here
-          title="Meet Stan Crider" // No apostrophe here
+          imageSrc="/images/ciwt_photos/2-1920w.jpg"
+          imageAlt="Stan Crider, Lead Welding Instructor"
+          title="Meet Stan Crider"
         >
-          <div className="prose prose-neutral max-w-none"> {/* No apostrophe here */}
+          <div className="prose prose-neutral max-w-none">
             <p>
               Stan Crider, Owner and Lead Instructor at Crider’s Institute of Welding Technology, brings over 45 years of experience in nearly every aspect of the welding industry and more than 25 years teaching in private schools and public colleges.
             </p>
@@ -82,12 +82,12 @@ export default function Home() {
 
         <InfoBlock
           imageSrc="/images/ciwt_photos/3-1920w.jpg"
-          imageAlt="Hands-on welding in class" // No apostrophe here
+          imageAlt="Hands-on welding in class"
           title="Master & Hobby Welding Programs"
           reverse
         >
           <div className="prose prose-neutral max-w-none">
-            <p> {/* No apostrophe here */}
+            <p>
               At Crider&apos;s Institute of Welding Technology, you can become a certified welder in as little as 4 months with our 16-week program or gain advanced pipe welding certification with our 24-week option. Flexible schedules and tuition assistance available!
             </p>
             <p>
@@ -104,10 +104,10 @@ export default function Home() {
           {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
             <Image
-              src="/images/ciwt_photos/3-1920w.jpg" // No apostrophe here
-              alt="Master welding student in workshop" // No apostrophe here
-              width={600} // No apostrophe here
-              height={400} // No apostrophe here
+              src="/images/ciwt_photos/3-1920w.jpg"
+              alt="Master welding student in workshop"
+              width={600}
+              height={400}
             />
             <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">
               Master Welders Program
@@ -126,10 +126,10 @@ export default function Home() {
           {/* Card 2 */}
           <div className="p-6 rounded-lg shadow-md bg-white flex flex-col items-center">
             <Image
-              src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg" // No apostrophe here
-              alt="Hobby welding class" // No apostrophe here
-              width={600} // No apostrophe here
-              height={400} // No apostrophe here
+              src="/images/stock_photos/RSshutterstock_138897641-1920w.jpg"
+              alt="Hobby welding class"
+              width={600}
+              height={400}
             />
             <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900">
               Hobby Welding Classes
@@ -156,7 +156,7 @@ export default function Home() {
           {reviews.map((review, idx) => (
             <div key={idx} className="px-4">
               <div className="border border-gray-200 rounded-lg p-8 shadow-xl bg-white flex flex-col justify-between h-full">
-                <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow"> {/* No apostrophe here */}
+                <p className="text-gray-800 mb-4 text-lg italic leading-relaxed flex-grow">
                   &quot;{review.quote}&quot;
                 </p>
                 <p className="text-sm font-semibold text-gray-600 text-right mt-auto">
