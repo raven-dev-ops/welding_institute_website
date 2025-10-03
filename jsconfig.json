@@ -1,10 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
+      "@components": ["src/components/index.js"],
+      "@components/*": ["src/components/*"],
+      "@sections": ["src/components/sections/index.js"],
+      "@sections/*": ["src/components/sections/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@data": ["src/data/index.js"],
+      "@layout": ["src/layout"],
+      "@layout/*": ["src/layout/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"],
       "@public/*": ["public/*"],
       "@images/*": ["images/*"],
       "@videos/*": ["videos/*"]
