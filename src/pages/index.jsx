@@ -3,6 +3,7 @@ import { Hero, Multigrid, Multirow, Section } from "@sections";
 import Layout from "src/layout/Layout";
 import useData from "../hooks/useData";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const { staff, welding, enroll, showcase, reviews, info } = useData([
@@ -26,7 +27,7 @@ export default function Home() {
       />
       <Multigrid
         cells={showcase.cells}
-        header="Why *Crider's Institute of Welding Technology* is the leader in welder training
+        header="Why *Crider&apos;s Institute of Welding Technology* is the leader in welder training
 "
       ></Multigrid>
       <Multirow
@@ -44,22 +45,23 @@ export default function Home() {
         <div className="basis-2/6 shrink-0 min-w-0">
           <div className=" text-left  pt-[22px] pb-[60px] h-full px-[9px]">
             <div className=" w-[105px] h-[105px] my-0 mr-[275px] ml-[-18px] max-w-[calc(100%-18px)] p-0 min-w-[25px] text-center">
-              <img
+              <Image
                 src="/images/web_art/textbubble.svg"
-                height="100%"
-                width="100%"
+                height={105}
+                width={105}
+                alt=""
               />
             </div>
             <h3 className="text-[50px] block w-[316px] relative h0auto max-w-full py-[2px] px-0 min-w-[25px] mt-[-16px] mx-0 mb-[8px]">
               <div className="text-[36px] text-white font-[Staatliches]">
-                <span>Here's What our satisfied customers are saying...</span>
+                <span>Here&apos;s What our satisfied customers are saying...</span>
               </div>
             </h3>
           </div>
         </div>
         <div className="basis-2/6 shrink-0 min-w-0 mt-[2.7em]">
-          {reviews.rows.map((review) => {
-            return <Review {...review} />;
+          {reviews.rows.map((review, idx) => {
+            return <Review key={`review-${idx}`} {...review} />;
           })}
           <div classNamrr="mt-4 flex">
             <div className="w-[65%]">
@@ -86,10 +88,11 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-[30px] w-[110px] h-[110px]">
-            <img
+            <Image
               src="https://cdn.hibuwebsites.com/ddb8d584984c41d78393946877d4c6fb/dms3rep/multi/play-icon2.svg"
-              height="100%"
-              width="100%"
+              height={110}
+              width={110}
+              alt=""
             />
           </div>
         </div>
@@ -116,7 +119,7 @@ export default function Home() {
                   </a>
                   <span>
                     {" "}
-                    or by calling Crider's Institute of Welding Technology
+                    or by calling Crider&apos;s Institute of Welding Technology
                   </span>
                   <span> at </span>
                   <span className="font-bold">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Accordion, CTAButton } from "@components";
+import Image from "next/image";
 
 const Page = ({
   sections = [],
@@ -15,9 +16,9 @@ const Page = ({
         {/* Content */}
         <div className={`${withCallout ? "basis-2/3" : "w-full"}`}>
           {/* Dynamic sections */}
-          {sections.map((section) => {
+          {sections.map((section, idx) => {
             return (
-              <div className="max-w-full mx-auto flex flex-col gap-5">
+              <div key={`section-${idx}`} className="max-w-full mx-auto flex flex-col gap-5">
                 <div>
                   <Typography level="h2">{section.header}</Typography>
                   <div
@@ -25,10 +26,11 @@ const Page = ({
                       withCallout ? "max-w-[586px]" : "max-w-full"
                     } my-[8px] leading-[1.5] flex flex-col gap-[30px] `}
                   >
-                    {section.p.map((paragraph) => {
+                    {section.p.map((paragraph, p_idx) => {
                       if (paragraph.type === "accordion") {
                         return (
                           <div
+                            key={`p-accordion-${p_idx}`}
                             className={`${
                               withCallout ? "max-w-[586px]" : "max-w-full"
                             } py-[2px] max-w-[586px] my-[8px] leading-[1.5] flex flex-col gap-[30px] `}
@@ -39,10 +41,10 @@ const Page = ({
                       }
                       if (paragraph.type === "list") {
                         return (
-                          <ul className="list-disc list-inside pl-[30px] indent-6.5">
-                            {courses.map((course) => {
+                          <ul key={`p-list-${p_idx}`} className="list-disc list-inside pl-[30px] indent-6.5">
+                            {courses.map((course, c_idx) => {
                               return (
-                                <li>
+                                <li key={`course-item-${c_idx}`}>
                                   <Typography level="p">
                                     {course.name}
                                   </Typography>
@@ -53,7 +55,7 @@ const Page = ({
                         );
                       }
                       return (
-                        <Typography level="p">{paragraph.text}</Typography>
+                        <Typography key={`p-text-${p_idx}`} level="p">{paragraph.text}</Typography>
                       );
                     })}
                   </div>
@@ -69,10 +71,11 @@ const Page = ({
               <div className="bg-[rgba(16,23,78,1)] border-solid pt-[20px] pb-[10px] ">
                 <center>
                   <div className="w-[239px] h-[80px]">
-                    <img
+                    <Image
                       src="/images/web_art/map-pin.svg"
-                      height="80px"
-                      width="80px"
+                      height={80}
+                      width={80}
+                      alt=""
                     />
                   </div>
                   <div className="text-[36px] font-[Staatliches] leading-[28px] mt-[10px] my-[1em] text-[#fff]">
@@ -93,10 +96,11 @@ const Page = ({
               <div className="bg-cta pt-[20px] pb-[10px] px-[20px]">
                 <center>
                   <div className="w-[80px] h-[55px]">
-                    <img
+                    <Image
                       src="/images/web_art/message.svg"
-                      height="100%"
-                      width="100%"
+                      height={55}
+                      width={80}
+                      alt=""
                     />
                   </div>
                   <div className="mt-[25px] text-[16px] italic text-white my-[1em]">

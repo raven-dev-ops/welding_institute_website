@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SocialDividerRow() {
   return (
     <div className="w-full flex items-center justify-center py-3 bg-[#10174e]">
@@ -14,10 +16,11 @@ export default function SocialDividerRow() {
           rel="noopener noreferrer"
           className="inline-block hover:opacity-80 transition"
         >
-          <img
+          <Image
             src="https://cdn.websites.hibu.com/-resellers-preview/_social_icons/hibu_facebook.svg"
             alt="Facebook"
-            className="h-[40px] w-[40px]"
+            width={40}
+            height={40}
           />
         </a>
         {/* add more icons here */}

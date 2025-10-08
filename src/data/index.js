@@ -1,4 +1,4 @@
-export default {
+const data = {
   info: {
     tel: {
       display: "(816) 992-4046",
@@ -102,3 +102,5 @@ export default {
     ],
   },
 };
+
+export default data;

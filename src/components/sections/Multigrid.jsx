@@ -22,12 +22,12 @@ const Multigrid = ({ cells, header, backgroundImage = "" }) => {
         <div className="w-full max-w-none flex justify-center">
           <div display="flex max-w-[960px] mx-auto w-full justify-center">
             <h3 className="w-full mt-[8px] mx-auto mb-0 h-auto py-[2px] font-[Staatliches] font-medium text-[28px]">
-              {highlightHeader.map((section) => {
+              {highlightHeader.map((section, idx) => {
                 const isHighlight =
                   !section.startsWith(" ") && !section.endsWith(" ");
-                if (!isHighlight) return <span>{section}</span>;
+                if (!isHighlight) return <span key={`section-${idx}`}>{section}</span>;
                 return (
-                  <font>
+                  <font key={`section-font-${idx}`}>
                     <span>
                       <font className="text-[#0011a7]">{section}</font>
                     </span>
@@ -39,14 +39,14 @@ const Multigrid = ({ cells, header, backgroundImage = "" }) => {
         </div>
         {/* gird */}
         <div className="grid grid-cols-3 grid-rows-2 row- max-w-[960px] m-auto h-[375px]">
-          {cells.map((cell) => {
+          {cells.map((cell, idx) => {
             const split = cell.caption.split("*");
             console.log({ split });
             return (
-              <div className="flex flex-col justify-center items-center">
+              <div key={cell.caption || `cell-${idx}`} className="flex flex-col justify-center items-center">
                 {/* icon */}
                 <div className="max-w-[100%] mx-auto">
-                  <Image src={cell.icon} height={79} width={79} />
+                  <Image src={cell.icon} height={79} width={79} alt="" />
                 </div>
                 {/* caption */}
                 <div className="whitespace-break-spaces w-[calc(100%-5px)] h-auto max-w-[171px] py-[2px] px-0 min-w-[25px] block text-center mx-auto text-[17px]">

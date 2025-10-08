@@ -29,8 +29,8 @@ const FooterCard = ({ Icon, header, content, links }) => {
             <div className="flex justify-center">{content()}</div>
           </div>
           <div className="mx-auto">
-            {links.map((link) => (
-              <div>
+            {links.map((link, idx) => (
+              <div key={link.href || `link-${idx}`}>
                 <Link
                   target="_blank"
                   href={link.href}

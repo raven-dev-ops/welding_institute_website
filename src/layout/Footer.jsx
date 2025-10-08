@@ -2,6 +2,7 @@ import SocialDividerRow from "../components/SocialDivider";
 import { MapPin, Clock8, Megaphone, Icon } from "lucide-react";
 import FooterCard from "../components/FooterCard";
 import Hero from "@sections/Hero";
+import Image from "next/image";
 
 export default function Footer({ showVideo = true }) {
   const footerLinks = [
@@ -31,7 +32,7 @@ export default function Footer({ showVideo = true }) {
         return (
           <div className="text-center">
             <div>
-              <span>Cider's Institute of Welding Technology</span>
+              <span>Cider&apos;s Institute of Welding Technology</span>
             </div>
             <div>
               <span>300 NW Jefferson</span>
@@ -120,10 +121,11 @@ export default function Footer({ showVideo = true }) {
               </div>
             </div>
             <div className="mt-[30px] w-[110px] h-[110px]">
-              <img
+              <Image
                 src="https://cdn.hibuwebsites.com/ddb8d584984c41d78393946877d4c6fb/dms3rep/multi/play-icon2.svg"
-                height="100%"
-                width="100%"
+                height={110}
+                width={110}
+                alt=""
               />
             </div>
           </div>
@@ -137,8 +139,8 @@ export default function Footer({ showVideo = true }) {
           }}
         >
           <div className="flex justify-evenly align-center text-center w-full m-auto">
-            {footerCards.map(({ ...props }) => (
-              <FooterCard {...props} />
+            {footerCards.map(({ ...props }, idx) => (
+              <FooterCard key={`${props.header}-${idx}`} {...props} />
             ))}
           </div>
         </div>

@@ -3,6 +3,7 @@ import Accordion from "@components/Accordion";
 import Typography from "@components/Typography";
 import Layout from "@layout/Layout";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MasterWelding() {
   const courses = [
@@ -198,12 +199,12 @@ export default function MasterWelding() {
                     weeks.
                   </Typography>
                   <Typography level="p">
-                    Crider's Institute of Welding Technology offers the most
+                    Crider&apos;s Institute of Welding Technology offers the most
                     esteemed and valuable welder training in Springfield, MO and
                     throughout the Kansas City metropolitan area. Since 2015,
-                    we've served as the most reputable and distinguished welding
+                    we&apos;ve served as the most reputable and distinguished welding
                     school in the community. When you visit us or enroll in a
-                    course, you'll quickly see why that's the case. Contact us
+                    course, you&apos;ll quickly see why that&apos;s the case. Contact us
                     today to learn more.
                   </Typography>
                 </div>
@@ -221,9 +222,9 @@ export default function MasterWelding() {
                   </Typography>
                   <Typography level="p">Our curriculum:</Typography>
                   <ul className="list-disc list-inside pl-[30px] indent-6.5">
-                    {courses.map((course) => {
+                    {courses.map((course, idx) => {
                       return (
-                        <li>
+                        <li key={`course-${idx}`}>
                           <Typography level="p">{course.name}</Typography>
                         </li>
                       );
@@ -280,10 +281,11 @@ export default function MasterWelding() {
               <div className="bg-[rgba(16,23,78,1)] border-solid pt-[20px] pb-[10px] ">
                 <center>
                   <div className="w-[239px] h-[80px]">
-                    <img
+                    <Image
                       src="/images/web_art/map-pin.svg"
-                      height="80px"
-                      width="80px"
+                      height={80}
+                      width={80}
+                      alt=""
                     />
                   </div>
                   <div className="text-[36px] font-[Staatliches] leading-[28px] mt-[10px] my-[1em] text-[#fff]">
@@ -304,10 +306,11 @@ export default function MasterWelding() {
               <div className="bg-cta pt-[20px] pb-[10px] px-[20px]">
                 <center>
                   <div className="w-[80px] h-[55px]">
-                    <img
+                    <Image
                       src="/images/web_art/message.svg"
-                      height="100%"
-                      width="100%"
+                      height={55}
+                      width={80}
+                      alt=""
                     />
                   </div>
                   <div className="mt-[25px] text-[16px] italic text-white my-[1em]">

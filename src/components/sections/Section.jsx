@@ -42,9 +42,9 @@ const Section = ({
             } flex ${cols > 1 ? "flex-row" : "flex-col"}`}
           >
             {paragraphs
-              ? paragraphs.map((p) => {
+              ? paragraphs.map((p, idx) => {
                   return (
-                    <p className={`text-center w-[${width}] flex-1`}>{p}</p>
+                    <p key={`p-${idx}`} className={`text-center w-[${width}] flex-1`}>{p}</p>
                   );
                 })
               : children}

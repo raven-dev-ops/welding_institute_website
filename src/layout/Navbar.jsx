@@ -78,9 +78,8 @@ export default function Navbar() {
                         <div className="absolute opacity-0 z-100 translate-y-[-10px] group-hover:block group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out ">
                           <ul className="flex flex-col justify-start absolute left-[30px] top-[100%]  bg-white  list-inside divide-y-1 divide-[#333] ">
                             {link.children.map((item) => (
-                              <li className="flex flex-col relative w-[100%]">
+                              <li key={item.name} className="flex flex-col relative w-[100%]">
                                 <Link
-                                  key={item.name}
                                   href={item.href}
                                   className="py-[15px] pl-[15px] pr-[30px] flex justify-start items-center cursor-pointer min-w-[25px] w-[100%]"
                                 >
