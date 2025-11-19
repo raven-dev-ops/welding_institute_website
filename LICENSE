@@ -1,0 +1,13 @@
+NO LICENSE (All Rights Reserved)
+
+Except for third-party components and dependencies that are provided under
+their own licenses, all source code and original content in this repository
+is proprietary. The repository owner reserves all rights.
+
+No permission is granted to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of this software, in whole or in part,
+without explicit written permission from the owner.
+
+Third-party dependencies (as listed in files such as `package.json` and
+vendored assets under `public/`) remain under their respective licenses.
+
